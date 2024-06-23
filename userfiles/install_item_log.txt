@@ -1,0 +1,11 @@
+Request install...
+Searching for microweber-templates/new-world for version latest
+Applying post update actions
+Applying post update actions
+Applying post update actions
+Applying post update actions
+Applying post update actions
+Applying post update actions
+Applying post update actions
+Applying post update actions
+Applying post update actions

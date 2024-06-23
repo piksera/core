@@ -1,0 +1,40 @@
+{
+  "name": "microweber-templates/bloggy",
+  "type": "microweber-template",
+  "description": "Bloggy",
+  "keywords": [
+    "microweber",
+    "ecommerce",
+    "bootstrap",
+    "default"
+  ],
+  "homepage": "https://microweber.com/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "MW Team",
+      "email": "contacts@microweber.com"
+    }
+  ],
+  "extra": {
+    "categories": [
+      "ecommerce"
+    ],
+    "colors": [
+      {
+        "name": "Blue",
+        "hex": "#0044de"
+      },
+      {
+        "name": "Black",
+        "hex": "#212529"
+      },
+      {
+        "name": "White",
+        "hex": "#fff"
+      }
+    ],
+    "preview_url": "https://templates.microweber.com/bloggy/"
+  },
+  "target-dir": "bloggy"
+}

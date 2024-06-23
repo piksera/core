@@ -1,0 +1,52 @@
+{
+  "_@core-fe5261da.js": {
+    "file": "assets/@core-fe5261da.js"
+  },
+  "_mitt-ddb05c3b.js": {
+    "file": "assets/mitt-ddb05c3b.js"
+  },
+  "src/MicroweberPackages/LiveEdit/resources/js/ui/admin-app.js": {
+    "file": "assets/admin-app-6b08fcff.js",
+    "imports": [
+      "_@core-fe5261da.js"
+    ],
+    "isEntry": true,
+    "src": "src/MicroweberPackages/LiveEdit/resources/js/ui/admin-app.js"
+  },
+  "src/MicroweberPackages/LiveEdit/resources/js/ui/apps/ElementStyleEditor/element-style-editor-app.css": {
+    "file": "assets/element-style-editor-app-cfabb825.css",
+    "src": "src/MicroweberPackages/LiveEdit/resources/js/ui/apps/ElementStyleEditor/element-style-editor-app.css"
+  },
+  "src/MicroweberPackages/LiveEdit/resources/js/ui/apps/ElementStyleEditor/element-style-editor-app.js": {
+    "css": [
+      "assets/element-style-editor-app-cfabb825.css"
+    ],
+    "file": "assets/element-style-editor-app-0c87dcc8.js",
+    "imports": [
+      "_mitt-ddb05c3b.js"
+    ],
+    "isEntry": true,
+    "src": "src/MicroweberPackages/LiveEdit/resources/js/ui/apps/ElementStyleEditor/element-style-editor-app.js"
+  },
+  "src/MicroweberPackages/LiveEdit/resources/js/ui/live-edit-app.css": {
+    "file": "assets/live-edit-app-f62842c6.css",
+    "src": "src/MicroweberPackages/LiveEdit/resources/js/ui/live-edit-app.css"
+  },
+  "src/MicroweberPackages/LiveEdit/resources/js/ui/live-edit-app.js": {
+    "css": [
+      "assets/live-edit-app-f62842c6.css"
+    ],
+    "file": "assets/live-edit-app-04657a7f.js",
+    "imports": [
+      "_@core-fe5261da.js",
+      "_mitt-ddb05c3b.js"
+    ],
+    "isEntry": true,
+    "src": "src/MicroweberPackages/LiveEdit/resources/js/ui/live-edit-app.js"
+  },
+  "src/MicroweberPackages/LiveEdit/resources/js/ui/live-edit-page-scripts.js": {
+    "file": "assets/live-edit-page-scripts-cf30975b.js",
+    "isEntry": true,
+    "src": "src/MicroweberPackages/LiveEdit/resources/js/ui/live-edit-page-scripts.js"
+  }
+}

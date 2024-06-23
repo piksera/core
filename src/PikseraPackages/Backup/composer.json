@@ -1,0 +1,34 @@
+{
+    "name": "piksera-packages/piksera-backup-manager",
+    "description": "Piksera Backup Manager.",
+    "version": "2.0",
+    "authors": [
+        {
+            "name": "Piksera",
+            "email": "info@piksera.com"
+        },
+        {
+            "name": "Bozhidar Slaveykov",
+            "email": "bobi@piksera.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "PikseraPackages\\Backup\\": ""
+        },
+        "files": [
+            "functions/helpers.php"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "homepage": "http://piksera.com",
+    "license": "MIT",
+    "support": {
+        "email": "support@piksera.com"
+    }
+}

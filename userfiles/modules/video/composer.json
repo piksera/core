@@ -1,0 +1,25 @@
+{
+  "name": "piksera/video",
+  "description": "Video embeding.",
+  "license": "MIT",
+  "homepage": "https://www.piksera.com",
+  "authors": [
+    {
+      "name": "Bozhidar Slaveykov",
+      "email": "bobi@piksera.com"
+    }
+  ],
+  "keywords": [
+    "vimeo",
+    "video",
+    "youtube",
+    "playlist"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Piksera\\Modules\\Video\\": "src/"
+    }
+  },
+  "type": "piksera-module",
+  "target-dir": "video"
+}

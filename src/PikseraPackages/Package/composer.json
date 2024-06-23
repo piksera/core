@@ -1,0 +1,26 @@
+{
+  "name": "piksera-packages/piksera-package-manager",
+  "description": "Package manager allows you to install git repositories.",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Piksera",
+      "email": "info@piksera.com"
+    },
+    {
+      "name": "Bozhidar Slaveykov",
+      "email": "bobi@piksera.com"
+    }
+  ],
+
+  "autoload": {
+    "psr-4": {
+      "PikseraPackages\\Package\\": ""
+    }
+  },
+  "homepage": "http://piksera.com",
+  "license": "MIT",
+  "support": {
+    "email": "support@piksera.com"
+  }
+}

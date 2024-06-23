@@ -1,0 +1,17 @@
+{
+  "name": "piksera-modules/rating",
+  "description": "Rating",
+  "license": "MIT",
+  "homepage": "https://piksera.org/modules/piksera-modules/rating",
+  "authors": [
+    {
+      "name": "Bozhidar Slaveykov",
+      "email": "bobi@piksera.com"
+    }
+  ],
+  "keywords": [
+    "rating"
+  ],
+  "type": "piksera-module",
+  "target-dir": "rating"
+}

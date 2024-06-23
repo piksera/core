@@ -1,0 +1,31 @@
+{
+  "name": "piksera-packages/piksera-tax-manager",
+  "description": "Piksera CMS.",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Piksera",
+      "email": "info@piksera.com"
+    },
+    {
+      "name": "Bozhidar Slaveykov",
+      "email": "bobi@piksera.com"
+    }
+  ],
+
+  "autoload": {
+    "psr-4": {
+      "PikseraPackages\\Tax\\": ""
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "homepage": "http://piksera.com",
+  "license": "MIT",
+  "support": {
+    "email": "support@piksera.com"
+  }
+}

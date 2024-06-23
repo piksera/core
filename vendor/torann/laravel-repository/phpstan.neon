@@ -1,0 +1,7 @@
+parameters:
+    reportUnmatchedIgnoredErrors: false
+    excludePaths:
+        - vendor
+    ignoreErrors:
+        - '#Function config_path not found#'
+        - "#^Unsafe usage of new static#"

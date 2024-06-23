@@ -1,0 +1,17 @@
+{
+  "name": "piksera-modules/toc",
+  "description": "toc",
+  "license": "MIT",
+  "homepage": "https://piksera.org/go/toc",
+  "authors": [
+    {
+      "name": "Bozhidar Slaveykov",
+      "email": "bobi@piksera.com"
+    }
+  ],
+  "keywords": [
+    "toc"
+  ],
+  "type": "piksera-module",
+  "target-dir": "toc"
+}

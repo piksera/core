@@ -1,0 +1,26 @@
+{
+    "name": "piksera-packages/meta-tags",
+    "description": "Piksera CMS.",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "Piksera",
+            "email": "info@piksera.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PikseraPackages\\MetaTags\\": ""
+        },
+        "files": [
+            "helpers/meta_tags_functions.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "homepage": "http://piksera.com",
+    "license": "MIT",
+    "support": {
+        "email": "support@piksera.com"
+    }
+}

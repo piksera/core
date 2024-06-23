@@ -1,0 +1,27 @@
+<?php
+
+namespace {{moduleNamespace}}\Providers;
+
+use Livewire\Livewire;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
+use PikseraPackages\Module\Facades\ModuleAdmin;
+use {{moduleNamespace}}\Http\Livewire\{{moduleNameCamelCase}}SettingsComponent;
+
+class {{moduleNameCamelCase}}ServiceProvider extends PackageServiceProvider
+{
+    public function configurePackage(Package $package): void
+    {
+        $package->name('piksera-module-{{moduleSlug}}');
+        $package->hasViews('piksera-module-{{moduleSlug}}');
+    }
+
+    public function register(): void
+    {
+        parent::register();
+        Livewire::component('piksera-module-{{moduleSlug}}::settings', {{moduleNameCamelCase}}SettingsComponent::class);
+        ModuleAdmin::registerSettings('{{moduleSlug}}', 'piksera-module-{{moduleSlug}}::settings');
+
+    }
+
+}

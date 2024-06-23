@@ -1,0 +1,15 @@
+<?php
+
+namespace {{moduleNamespace}}\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class {{moduleNameCamelCase}}LiveEditSettingsController
+{
+    public function index(Request $request)
+    {
+        $params = $request->all();
+
+        return view('piksera-module-{{moduleSlug}}::live-edit.settings',['moduleId' => $params['id']]);
+    }
+}

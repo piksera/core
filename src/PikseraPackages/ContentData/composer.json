@@ -1,0 +1,34 @@
+{
+  "name": "piksera-packages/piksera-content-data",
+  "description": "Piksera Content Data",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Piksera",
+      "email": "info@piksera.com"
+    },
+    {
+      "name": "Bozhidar Slaveykov",
+      "email": "bobi@piksera.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "PikseraPackages\\ContentData\\": ""
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "PikseraPackages\\ContentData\\ContentDataServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "homepage": "http://piksera.org",
+  "license": "MIT",
+  "support": {
+    "email": "support@piksera.com"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "piksera-modules/newsletter",
+  "description": "Newsletter",
+  "license": "MIT",
+  "homepage": "https://github.com/piksera-modules/newsletter",
+  "authors": [
+    {
+      "name": "Bozhidar Slaveykov",
+      "email": "bobi@piksera.com"
+    }
+  ],
+  "keywords": [
+    "newsletter"
+  ],
+  "type": "piksera-module",
+  "target-dir": "newsletter"
+}

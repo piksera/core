@@ -1,0 +1,35 @@
+{
+  "name": "piksera-packages/piksera-user-manager",
+  "description": "Piksera user manager.",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Piksera",
+      "email": "info@piksera.com"
+    },
+    {
+      "name": "Bozhidar Slaveykov",
+      "email": "bobi@piksera.com"
+    }
+  ],
+
+  "autoload": {
+    "psr-4": {
+      "PikseraPackages\\User\\": ""
+    },
+    "files": [
+      "helpers/helpers.php",
+      "helpers/api_user.php"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "homepage": "http://piksera.com",
+  "license": "MIT",
+  "support": {
+    "email": "support@piksera.com"
+  }
+}

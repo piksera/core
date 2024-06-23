@@ -1,0 +1,26 @@
+{
+  "name": "piksera-modules/shop",
+  "description": "Shop",
+  "license": "MIT",
+  "version": "0.4",
+  "homepage": "https://github.com/piksera-modules/shop",
+  "authors": [
+       {
+      "name": "Peter Ivanov",
+      "email": "peter@piksera.com"
+    },
+     {
+      "name": "Petko Yovchevski",
+      "email": "petko@piksera.com"
+    },
+    {
+      "name": "Bozhidar Slaveykov",
+      "email": "bobi@piksera.com"
+    }
+  ],
+  "keywords": [
+    "shop"
+  ],
+  "type": "piksera-module",
+  "target-dir": "shop"
+}

@@ -1,0 +1,11 @@
+{
+    "name": "piksera-modules/site_stats",
+    "description": "Stats for Piksera CMS",
+    "type": "metapackage",
+
+    "autoload": {
+        "psr-4": {
+            "PikseraPackages\\SiteStats\\": "src/"
+        }
+    }
+}

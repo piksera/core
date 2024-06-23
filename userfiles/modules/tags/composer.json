@@ -1,0 +1,17 @@
+{
+  "name": "piksera-modules/tags",
+  "description": "Tags",
+  "license": "MIT",
+  "homepage": "https://piksera.org/modules/piksera-modules/tags",
+  "authors": [
+    {
+      "name": "Bozhidar Slaveykov",
+      "email": "bobi@piksera.com"
+    }
+  ],
+  "keywords": [
+    "tags"
+  ],
+  "type": "piksera-module",
+  "target-dir": "tags"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "piksera-modules/multilanguage",
+  "description": "Multilanguage",
+  "license": "MIT",
+  "homepage": "https://piksera.org/modules/piksera-modules/multilanguage",
+  "authors": [
+    {
+      "name": "Bozhidar Slaveykov",
+      "email": "bobi@piksera.com"
+    }
+  ],
+  "keywords": [
+    "multilanguage"
+  ],
+  "type": "piksera-module",
+  "target-dir": "multilanguage"
+}

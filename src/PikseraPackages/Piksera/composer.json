@@ -1,0 +1,28 @@
+{
+  "name": "piksera-packages/piksera",
+  "description": "Piksera CMS.",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Piksera",
+      "email": "info@piksera.com"
+    },
+    {
+      "name": "Peter Ivanov",
+      "email": "peter@piksera.com"
+    }
+  ],
+
+  "autoload": {
+    "psr-4": {
+      "PikseraPackages\\Piksera\\": ""
+    }
+  },
+
+  "minimum-stability": "dev",
+  "homepage": "http://piksera.com",
+  "license": "MIT",
+  "support": {
+    "email": "support@piksera.com"
+  }
+}
