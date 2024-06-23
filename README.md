@@ -54,7 +54,7 @@ Piksera CMS primarily focuses on e-commerce, making it an ideal choice for aspir
 - [Piksera Videos](https://www.youtube.com/c/pikserawebsitebuildercms)
 - [Deploy Piksera on DigitalOcean](https://marketplace.digitalocean.com/apps/piksera?action=deploy&refcode=83e0646738fe)
 - [Deploy Piksera Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/pikseracms.piksera-cms?tab=Overview)
-- [Deploy Piksera on Linode](https://www.linode.com/marketplace/apps/piksera/piksera-cms/)
+- [Deploy Piksera on Linode](https://www.linode.com/marketplace/apps/piksera/core-cms/)
 - [Deploy Piksera on Vultr](https://www.vultr.com/marketplace/apps/piksera)
 - [Use Piksera Plesk plugin](https://piksera.org/go/plesk_plugin/)
 
@@ -133,7 +133,7 @@ Ensure you have [Composer installed](https://getcomposer.org/doc/00-intro.md) to
 Install Piksera with `composer` command:
 
 ```bash
-composer create-project piksera/piksera my_site dev-master  
+composer create-project piksera/core my_site dev-master  
 ```
 
 Install NPM dependencies:
@@ -178,12 +178,12 @@ Join our Discord server [here](https://piksera.org/go/discord).
 ## Build Status
 
 ### Master branch
-![PHP Unit Tests](https://github.com/piksera/piksera/actions/workflows/ci.yml/badge.svg)
-[![codecov](https://codecov.io/gh/piksera/piksera/branch/dev/graph/badge.svg?token=aLAgaSMcbZ)](https://codecov.io/gh/piksera/piksera)
+![PHP Unit Tests](https://github.com/piksera/core/actions/workflows/ci.yml/badge.svg)
+[![codecov](https://codecov.io/gh/piksera/core/branch/dev/graph/badge.svg?token=aLAgaSMcbZ)](https://codecov.io/gh/piksera/core)
 
 ### Dev branch
-![PHP Unit Tests](https://github.com/piksera/piksera/actions/workflows/ci.yml/badge.svg?branch=dev)
-![Browser Tests](https://github.com/piksera/piksera/actions/workflows/dusk.yml/badge.svg?branch=dev)
+![PHP Unit Tests](https://github.com/piksera/core/actions/workflows/ci.yml/badge.svg?branch=dev)
+![Browser Tests](https://github.com/piksera/core/actions/workflows/dusk.yml/badge.svg?branch=dev)
 
 All development is done on the `dev` branch. The `master` branch is used for stable releases.
 
@@ -197,7 +197,7 @@ Please submit all pull requests to the `dev` branch.
 ### Code Contributors
 
 This project thrives thanks to all the contributors. [Learn how to contribute](CONTRIBUTING.md).
-[![Code Contributors](https://opencollective.com/piksera/contributors.svg?width=890&button=false)](https://github.com/piksera/piksera/graphs/contributors)
+[![Code Contributors](https://opencollective.com/piksera/contributors.svg?width=890&button=false)](https://github.com/piksera/core/graphs/contributors)
 
 ### Financial Contributors
 

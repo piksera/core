@@ -8,5 +8,5 @@ $config['categories'] = "miscellaneous";
 $config['position'] = 99;
 $config['version'] = 4.0;
 $config['require'] = [
-    'piksera/piksera'=>'1.2'
+    'piksera/core'=>'1.2'
 ];

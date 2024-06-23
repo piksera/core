@@ -46,17 +46,17 @@ Open your Admin panel (ex: [www.yourwebsite.com/admin](http://www.yourwebsite.co
 
 In the admin panel go to Website -\&gt; Settings -\&gt; Language
 
-![](https://raw.githubusercontent.com/piksera/piksera-docs/master/assets/multilanguage/multi-1.png)
+![](https://raw.githubusercontent.com/piksera/core-docs/master/assets/multilanguage/multi-1.png)
 
 If you don&#39;t have installed Multilanguage module, you will see the green button called &quot;Install Multilanguage Module&quot;
 
-![](https://raw.githubusercontent.com/piksera/piksera-docs/master/assets/multilanguage/multi-2.png)
+![](https://raw.githubusercontent.com/piksera/core-docs/master/assets/multilanguage/multi-2.png)
 
 Click on it and the CMS will download and install automatically the multilanguage modules for you!
 
 After the installation complete, you need to confirm in this modal window
 
-![](https://raw.githubusercontent.com/piksera/piksera-docs/master/assets/multilanguage/multi-3.png)
+![](https://raw.githubusercontent.com/piksera/core-docs/master/assets/multilanguage/multi-3.png)
 
 **VOILÀ**!
 
@@ -64,7 +64,7 @@ You are admin panel and website support Multilanguage&#39;s
 
 You can add new language by clicking the &quot;Manage Multilanguage&quot; blue button
 
-![](https://raw.githubusercontent.com/piksera/piksera-docs/master/assets/multilanguage/multi-4.png)
+![](https://raw.githubusercontent.com/piksera/core-docs/master/assets/multilanguage/multi-4.png)
 
 The modal screen will upear allowing you to add new language. Here is how to do that:
  - Select the language you want to add (from **add new language** field) and click the **&quot;Add&quot;** button
@@ -73,7 +73,7 @@ The selected language will upper with his flag and locale.
 
 You can add as many languages you want.
 
-![](https://raw.githubusercontent.com/piksera/piksera-docs/master/assets/multilanguage/multi-5.png)
+![](https://raw.githubusercontent.com/piksera/core-docs/master/assets/multilanguage/multi-5.png)
 
 After finishing with adding languages, you can close this window.
 
@@ -81,17 +81,17 @@ The same settings and adding languages is available in the Multilanguage modules
 
 You can find it in the admin here: Modules -\&gt; Multilanguage
 
-![](https://raw.githubusercontent.com/piksera/piksera-docs/master/assets/multilanguage/multi-6.png)
+![](https://raw.githubusercontent.com/piksera/core-docs/master/assets/multilanguage/multi-6.png)
 
 How to change the language of your admin panel?
 
 It&#39;s easy, just select the language on you want to switch from the flag button at the top of the Admin panel here:
 
-![](https://raw.githubusercontent.com/piksera/piksera-docs/master/assets/multilanguage/multi-7.png)
+![](https://raw.githubusercontent.com/piksera/core-docs/master/assets/multilanguage/multi-7.png)
 
 Here is for example I want to see the CMS on Bulgarian language and all I need to do it just to switch on it.
 
-![](https://raw.githubusercontent.com/piksera/piksera-docs/master/assets/multilanguage/multi-8.png)
+![](https://raw.githubusercontent.com/piksera/core-docs/master/assets/multilanguage/multi-8.png)
 
 ! Important
  If you are not able to see the changes on the language that you add and select, this means simply
@@ -100,7 +100,7 @@ That there is no translation available for this language.
 
 Here are the languages we support for now and they are available here:
 
-![](https://raw.githubusercontent.com/piksera/piksera-docs/master/assets/multilanguage/multi-9.png)
+![](https://raw.githubusercontent.com/piksera/core-docs/master/assets/multilanguage/multi-9.png)
 
 [https://crowdin.com/project/piksera-cms](https://crowdin.com/project/piksera-cms)
 

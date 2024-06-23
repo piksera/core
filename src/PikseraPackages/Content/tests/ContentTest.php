@@ -409,13 +409,13 @@ class ContentTest extends TestCase
 //
 //        $title = 'title for testContentOriginalLinkRedirect' . uniqid();
 //        $description = 'description for testContentOriginalLinkRedirect' . uniqid() . '';
-//        $original_link = 'https://github.com/piksera/piksera/issues/963';
+//        $original_link = 'https://github.com/piksera/core/issues/963';
 //        $params = array(
 //            'title' => $title,
 //            'description' => $description,
 //            'content_type' => 'post',
 //            'parent' => $parent_page_id,
-//            'original_link' => 'https://github.com/piksera/piksera/issues/963',
+//            'original_link' => 'https://github.com/piksera/core/issues/963',
 //            'is_active' => 1,);
 //
 //        $save_post_id = save_content($params);

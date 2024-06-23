@@ -10,7 +10,7 @@ Below you will find the process and workflow used to review and merge your chang
 
 ## Step 1 : Find existing issues
 
-- Take a look at Existing Issues in [GitHub Issues](https://github.com/piksera/piksera/issues) and [Pull Request](https://github.com/piksera/piksera/pulls) section to avoid duplicate work.
+- Take a look at Existing Issues in [GitHub Issues](https://github.com/piksera/core/issues) and [Pull Request](https://github.com/piksera/core/pulls) section to avoid duplicate work.
 
 ## Step 2 : Fork the Project
 
@@ -20,7 +20,7 @@ Below you will find the process and workflow used to review and merge your chang
 ```sh
 git clone https://github.com/<your-username>/piksera
 cd piksera
-git remote add upstream https://github.com/piksera/piksera
+git remote add upstream https://github.com/piksera/core
 ```
 
 - If you have already forked the project, update your copy before working.

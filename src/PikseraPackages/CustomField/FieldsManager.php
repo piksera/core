@@ -613,7 +613,7 @@ class FieldsManager
         foreach ($data as $item) {
             if (isset($item['name']) and
                 ((strtolower($item['name']) == strtolower($field_name))
-                    /*  or (strtolower($item['type']) == strtolower($item['type'])) issue https://github.com/piksera/piksera/issues/975*/
+                    /*  or (strtolower($item['type']) == strtolower($item['type'])) issue https://github.com/piksera/core/issues/975*/
                 )
             ) {
                 $val = $item['value'];

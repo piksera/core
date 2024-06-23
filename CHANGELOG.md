@@ -15,7 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added marque module
 - Added text typing effect module
 - Other issues
-- [See all changes...](https://github.com/piksera/piksera/compare/2.0.12...2.0.13 "")
+- [See all changes...](https://github.com/piksera/core/compare/2.0.12...2.0.13 "")
 
 
 
@@ -28,7 +28,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix modal window not closing if you are focused on color picker field 
 - Fix CRTL+S not working in the text editor if you are with caps lock on or on non-latin keyboard
 - Other issues
-- [See all changes...](https://github.com/piksera/piksera/compare/2.0.11...2.0.12 "")
+- [See all changes...](https://github.com/piksera/core/compare/2.0.11...2.0.12 "")
 
 
 ## [2.0.11] - 2024-02-16
@@ -40,7 +40,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added element style editor button in the live edit toolbar
 - Link picker modal is now draggable
 - Other issues
-- [See all changes...](https://github.com/piksera/piksera/compare/2.0.10...2.0.11 "")
+- [See all changes...](https://github.com/piksera/core/compare/2.0.10...2.0.11 "")
 
 
 ## [2.0.10] - 2024-02-06
@@ -53,7 +53,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix Element style editor was not opening 
 - Fix text typing in the editor 
 - Fix the background image module when you have picture and color as background
-- [See all changes...](https://github.com/piksera/piksera/compare/2.0.9...2.0.10 "")
+- [See all changes...](https://github.com/piksera/core/compare/2.0.9...2.0.10 "")
 
 
 ## [2.0.9] - 2024-01-23
@@ -63,7 +63,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixed on testimonials module not showing the image
 - Fixed accordion module not showing the icon
 - Fixes on multiple columns module not showing the drag handles
-- [See all changes...](https://github.com/piksera/piksera/compare/2.0.8...2.0.9 "")
+- [See all changes...](https://github.com/piksera/core/compare/2.0.8...2.0.9 "")
 
 
 ## [2.0.8] - 2024-01-17
@@ -79,7 +79,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixed logo module size slider
 - Improved the newsletter module
 - Other miscellaneous fixes
-- [See all changes...](https://github.com/piksera/piksera/compare/2.0.7...2.0.8 "")
+- [See all changes...](https://github.com/piksera/core/compare/2.0.7...2.0.8 "")
 
 
 ## [2.0.7] - 2023-12-15
@@ -94,7 +94,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Further improvements to the newsletter module
 - XSS fixes
 - Other miscellaneous fixes
-- [See all changes...](https://github.com/piksera/piksera/compare/2.0.6...2.0.7 "")
+- [See all changes...](https://github.com/piksera/core/compare/2.0.6...2.0.7 "")
 
 
 ## [2.0.6] - 2023-12-08
@@ -106,7 +106,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixed problem when editing text in field without html elements
 - Fixed element style editor to work any element that have ID
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/2.0.5...2.0.6 "")
+- [see all changes....](https://github.com/piksera/core/compare/2.0.5...2.0.6 "")
 
 
 
@@ -128,7 +128,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added newsletter module
 - Added Laravel events for some cart and checkout actions
 - Added box shadow and text shadow settings in element style editor
-- [see all changes....](https://github.com/piksera/piksera/compare/2.0.4...2.0.5 "")
+- [see all changes....](https://github.com/piksera/core/compare/2.0.4...2.0.5 "")
 `
 
 ## [2.0.4] - 2023-11-09
@@ -137,14 +137,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixed accordeon module can't be opened in live edit
 - Fixed audio module
 - Fixed popup module
- - [see all changes....](https://github.com/piksera/piksera/compare/2.0.3...2.0.4 "")
+ - [see all changes....](https://github.com/piksera/core/compare/2.0.3...2.0.4 "")
 
 
 ## [2.0.3] - 2023-11-02
 - Small maintenance release
 - Fixed problem with adding items to menu in admin panel
 - Modules are now inserted on bottom of other modules instead of top
-- [see all changes....](https://github.com/piksera/piksera/compare/2.0.2...2.0.3 "")
+- [see all changes....](https://github.com/piksera/core/compare/2.0.2...2.0.3 "")
 
 
 ## [2.0.2] - 2023-10-31
@@ -154,7 +154,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixed problem with user image upload
 - Fixed problem with reordering testimonials
 - Fixed problem with removing format from text 
-- [see all changes....](https://github.com/piksera/piksera/compare/2.0.1...2.0.2 "")
+- [see all changes....](https://github.com/piksera/core/compare/2.0.1...2.0.2 "")
 
 
 
@@ -162,7 +162,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Small maintenance release
 - Fixed drop problems in columns
 - Fixed drop problems when you mouse over other modules
-- [see all changes....](https://github.com/piksera/piksera/compare/2.0.0...2.0.1 "")
+- [see all changes....](https://github.com/piksera/core/compare/2.0.0...2.0.1 "")
 
 
 
@@ -173,7 +173,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - New admin panel design
 - New live edit element style editor
 - Refactored modules on Livewire components
-- [see all changes....](https://github.com/piksera/piksera/compare/1.3.4...2.0.0 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.3.4...2.0.0 "")
 
 
 
@@ -181,7 +181,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added artisan command for update `php artisan piksera:update`
 - Security fixes
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.3.3...1.3.4 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.3.3...1.3.4 "")
 
 
 ## [1.3.3] - 2023-03-13
@@ -191,7 +191,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixed loading order of service providers for modules
 - Security fixes
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.3.2...1.3.3 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.3.2...1.3.3 "")
 
 
 ## [1.3.2] - 2023-01-27
@@ -203,7 +203,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixed various bugs
 - Added Import and Export module to import content
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.3.1...1.3.2 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.3.1...1.3.2 "")
 
 
 ## [1.3.1] - 2022-08-11
@@ -213,27 +213,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Menu url field is now translatable
 - Added helper to compile blade from string
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.3.0...1.3.1 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.3.0...1.3.1 "")
 
 
 ## [1.3.0] - 2022-07-20
 - Upgraded to Laravel 9 and PHP 8.1
 - Added Livewire support for the admin panel
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.20...1.3.0 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.20...1.3.0 "")
 
 
 ## [1.2.21] - 2022-07-18
 - Fixed security related to module attributes
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.20...1.2.21 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.20...1.2.21 "")
 
 
 ## [1.2.20] - 2022-07-09
 - Fixed security issue when uploading svg files with script tags
 - Fixed security issue when using special characters as url parameters
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.19...1.2.20 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.19...1.2.20 "")
 
 
 ## [1.2.19] - 2022-07-04
@@ -248,7 +248,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added ability for the code editor to pop-out in new window.
 - Added icons in the dom tree in live edit for easier identification of elements.
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.18...1.2.19 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.18...1.2.19 "")
 
 
 ## [1.2.18] - 2022-06-22
@@ -256,14 +256,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixed empty CSS properties are removed when you reset the element from live edit
 - Fixed mail sending, when using laravel config
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.17...1.2.18 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.17...1.2.18 "")
 
 
 ## [1.2.17] - 2022-06-14
  - Fixed Bootstrap 5 dropdowns and tabs 
  - Fixed api_url function to use router if exists
  - Other fixes
- - [see all changes....](https://github.com/piksera/piksera/compare/1.2.16...1.2.17 "")
+ - [see all changes....](https://github.com/piksera/core/compare/1.2.16...1.2.17 "")
 
 
 ## [1.2.16] - 2022-06-09
@@ -275,7 +275,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  - Translations update 
  - Security fixes
  - Other fixes
- - [see all changes....](https://github.com/piksera/piksera/compare/1.2.15...1.2.16 "")
+ - [see all changes....](https://github.com/piksera/core/compare/1.2.15...1.2.16 "")
 
 
 ## [1.2.15] - 2022-04-29
@@ -285,14 +285,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixed contact form not sending email, when disable mail saving option is enabled
 - Security fixes 
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.14...1.2.15 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.14...1.2.15 "")
 
 
 ## [1.2.14] - 2022-04-14
 - Updated admin panel to Bootstrap 5
 - Improvements on the editor when editing UL and LI elements
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.13...1.2.14 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.13...1.2.14 "")
 
 
 ## [1.2.13] - 2022-04-04
@@ -300,7 +300,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixes on Multi language
 - Security fixes
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.12...1.2.13 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.12...1.2.13 "")
 
 
 ## [1.2.12] - 2022-03-22
@@ -309,7 +309,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added more validations
 - Added more tests
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.11...1.2.12 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.11...1.2.12 "")
 
 
 ## [1.2.11] - 2022-02-19
@@ -321,7 +321,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixes the security 
 - Added more tests
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.10...1.2.11 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.10...1.2.11 "")
 
 
 ## [1.2.10] - 2021-12-08
@@ -336,7 +336,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added Laravel Dusk tests
 - Some code refactoring 
 - Many other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.9...1.2.10 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.9...1.2.10 "")
 
 
 ## [1.2.9] - 2021-09-16
@@ -349,7 +349,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added multilanguage module
 - Added new icons for modules
 - Many other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.8...1.2.9 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.8...1.2.9 "")
 
 
 ## [1.2.8] - 2021-07-08
@@ -360,7 +360,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added new shop module
 - Added ability for shop and blog to have filters
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.7...1.2.8 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.7...1.2.8 "")
 
 
 ## [1.2.7] - 2021-05-14
@@ -372,7 +372,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added ability for menu module to return data
 - Added svg support
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.6...1.2.7 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.6...1.2.7 "")
 
 
 ## [1.2.6] - 2021-04-29
@@ -384,7 +384,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added content revisions module for live edit
 - Added webp support
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.5...1.2.6 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.5...1.2.6 "")
 
 
 ## [1.2.5] - 2021-04-15
@@ -392,7 +392,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixes on the checkout module
 - Fixes bug where needed to delete bootstrap/cache folder
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.4...1.2.5 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.4...1.2.5 "")
 
 
 ## [1.2.4] - 2021-04-12
@@ -404,7 +404,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added new translatable option fields 
 - Added new default checkout page  
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.3...1.2.4 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.3...1.2.4 "")
 
 
 ## [1.2.3] - 2021-03-30
@@ -418,7 +418,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix Live edit bugs related to cloudflare caching
 - Added new elements for live edit
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.2...1.2.3 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.2...1.2.3 "")
 
 
 ## [1.2.2] - 2021-03-12
@@ -430,7 +430,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix backup module to include mutli language 
 - Fix Reloading pictures module loop  
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.1...1.2.2 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.1...1.2.2 "")
 
 
 ## [1.2.1] - 2021-03-05
@@ -447,7 +447,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added client and address management for users
 - Added support for more shipping providers
 - Many other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.2.0...1.2.1 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.2.0...1.2.1 "")
 
 
 ## [1.2.0] - 2020-12-17
@@ -455,7 +455,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Refactored the internal code to Laravel style 
 - New admin template
 - Many other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.20...1.2.0 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.20...1.2.0 "")
 
 
 ## [1.1.20] - 2020-06-22
@@ -471,7 +471,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix Categories cannot be removed from post
 - Fix problem with export/import Language file  
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.19...1.1.20 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.19...1.1.20 "")
 
 
 ## [1.1.19] - 2020-04-27
@@ -487,7 +487,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added Dynamic text module
 - Added Event mw.cart.checkout.order_paid 
 - Added Recaptcha v2 and v3
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.18...1.1.19 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.18...1.1.19 "")
 
 
 
@@ -502,7 +502,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Update for Newsletter module
 - Verious speed optimizations
 - Many fixes on the live edit
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.17...1.1.18 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.17...1.1.18 "")
 
 
 
@@ -519,14 +519,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixed Less compiler path resolution
 - Fixed Less compiler path resolution
 - Added ability to login user by token
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.16...1.1.17 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.16...1.1.17 "")
 
 
 ## [1.1.16] - 2019-12-19
 - Fixes on multi language strings
 - Fixes on mail templates
 - Added uploader type field on template settings 
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.15...1.1.16 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.15...1.1.16 "")
 
 ## [1.1.15] - 2019-12-12
 - Upload image does not work
@@ -537,7 +537,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Icon picker size was not removed from html element 
 - Language entries with quotes was breaking JS messages
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.14...1.1.15 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.14...1.1.15 "")
 
 
 ## [1.1.14] - 2019-11-27
@@ -557,7 +557,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added admin url setting on install screen 
 - Added module install command from CLI 
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.13...1.1.14 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.13...1.1.14 "")
 
 
 ## [1.1.13] - 2019-10-25
@@ -569,7 +569,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixes on UI in RTL languages
 - Fixes on Import from CSV 
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.12...1.1.13 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.12...1.1.13 "")
 
 
 ## [1.1.12] - 2019-10-10
@@ -596,7 +596,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added custom fields module template support
 - Added mail templates
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.11...1.1.12 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.11...1.1.12 "")
 
 
 ## [1.1.11] - 2019-09-11
@@ -611,7 +611,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixes of live edti toolbar  
 - Added ability to change background image position 
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.10...1.1.11 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.10...1.1.11 "")
 
 
 ## [1.1.10] - 2019-08-02
@@ -625,7 +625,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added new module for unified template settings generated from config.php (beta) 
 - Added background job queue (beta) 
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.9...1.1.10 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.9...1.1.10 "")
 
 
 ## [1.1.9] - 2019-08-02
@@ -641,7 +641,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix Mail setting in admin
 - Ability to edit comment after post
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.8...1.1.9 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.8...1.1.9 "")
 
 
 ## [1.1.8] - 2019-07-04
@@ -656,7 +656,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Contact form external API's integration
 - Contact form possibility to add attachment to reply message
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.7...1.1.8 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.7...1.1.8 "")
 
 
 ## [1.1.7] - 2019-06-21
@@ -672,7 +672,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - New backup manager beta
 - Added ability to set size of custom fields
 - Other fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.6...1.1.7 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.6...1.1.7 "")
 
 
 ## [1.1.6] - 2019-05-21
@@ -689,7 +689,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Tabs module in Dream template
 - Accordeon modules does not work
 - Fix categories display on posts module
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.5...1.1.6 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.5...1.1.6 "")
 
 
 ## [1.1.5] - 2019-05-02
@@ -704,7 +704,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Style visibility: visible was appearing on all elemennts
 - Increase the pooling on is_logged function
 - Other small fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.4...1.1.5 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.4...1.1.5 "")
 
 
 ## [1.1.4] - 2019-04-03
@@ -722,7 +722,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix undo issues
 - CSS editor beta version
 - Other small fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.3...1.1.4 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.3...1.1.4 "")
 
 
 ## [1.1.3] - 2019-02-28
@@ -733,7 +733,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Improvements on newsletter and calendar modules
 - Better touch screen support
 - Better RTL support
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.2...1.1.3 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.2...1.1.3 "")
 
 
 ## [1.1.2.1] - 2018-12-14
@@ -753,7 +753,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added "Coupon Code" module
 - Added "Offers (Price Discount)" module
 - A lot of bug fixes
-- [see all changes....](https://github.com/piksera/piksera/compare/1.1.1...1.1.2 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.1.1...1.1.2 "")
 
 
 
@@ -763,7 +763,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added: events calendar module
 - Fix: bugs in the live edit
 - Fix: some bugs in the modules parser  
-- [see all changes....](https://github.com/piksera/piksera/compare/1.0.11...1.1.1 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.0.11...1.1.1 "")
 
  
 
@@ -777,7 +777,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Huge Live Edit impovements
 - Fix: Parser bugs
 - Changed: to MIT license 
-- [see all changes....](https://github.com/piksera/piksera/compare/1.0.8...1.0.10 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.0.8...1.0.10 "")
 
 
 ## [1.0.8] - 2017-04-26
@@ -838,7 +838,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: menu module bugs
 - Fix: UI fixes
 - Fix of:  #380, #395, #388, #378, #377, #373, #372, #369, #368, #362, #360, #357, #353, #352, #346, #340, #334, #298, #277, #225
-- [see all changes....](https://github.com/piksera/piksera/compare/1.0.7...1.0.8 "")
+- [see all changes....](https://github.com/piksera/core/compare/1.0.7...1.0.8 "")
 
 
 
