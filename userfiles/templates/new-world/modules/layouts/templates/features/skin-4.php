@@ -32,19 +32,19 @@ $layout_classes = ' ' . $classes['padding_top'] . ' ' . $classes['padding_bottom
                         <div class="icon-holder col-12 col-sm-6 mx-auto col-md-3 cloneable allow-drop">
                             <i class="icon mw-micon-solid-Like safe-element"></i>
                             <h3>It Is Awesome!</h3>
-                            <p class="m-t-10">Microweber is one of the best website builders and CMS in the world. Use it for your own project, website or online store, for free!</p>
+                            <p class="m-t-10">Piksera is one of the best website builders and CMS in the world. Use it for your own project, website or online store, for free!</p>
                         </div>
 
                         <div class="icon-holder col-12 col-sm-6 mx-auto col-md-3 cloneable allow-drop">
                             <i class="icon mw-micon-solid-Hand safe-element"></i>
                             <h3>It Is Free</h3>
-                            <p class="m-t-10">Microweber is one of the best website builders and CMS in the world. Use it for your own project, website or online store, for free!</p>
+                            <p class="m-t-10">Piksera is one of the best website builders and CMS in the world. Use it for your own project, website or online store, for free!</p>
                         </div>
 
                         <div class="icon-holder col-12 col-sm-6 mx-auto col-md-3 cloneable allow-drop">
                             <i class="icon mw-micon-solid-Hipo safe-element"></i>
                             <h3>It Is Powerful</h3>
-                            <p class="m-t-10">Microweber is one of the best website builders and CMS in the world. Use it for your own project, website or online store, for free!</p>
+                            <p class="m-t-10">Piksera is one of the best website builders and CMS in the world. Use it for your own project, website or online store, for free!</p>
                         </div>
                     </div>
                 </div>

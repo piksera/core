@@ -22,7 +22,7 @@ class PackageManagerTest extends \PikseraPackages\Core\tests\TestCase
         $params = [];
         $params['require_name'] = 'piksera-templates/dream';
 
-        $runner = new \PikseraPackages\Package\PikseraComposerClient();
+        $runner = new \PikseraPackages\Package\MicroweberComposerClient();
 
         $results = $runner->search($params);
 
@@ -35,10 +35,10 @@ class PackageManagerTest extends \PikseraPackages\Core\tests\TestCase
             $this->markTestSkipped('Skipping package manager test for this server configuration!');
         }
 
-        $require_name = "piksera-templates/bloggy";
+        $require_name = "piksera-templates/new-world";
         $params['require_name'] = $require_name;
 
-        $runner = new \PikseraPackages\Package\PikseraComposerClient();
+        $runner = new \PikseraPackages\Package\MicroweberComposerClient();
 
         $results = $runner->requestInstall($params);
 
@@ -52,7 +52,7 @@ class PackageManagerTest extends \PikseraPackages\Core\tests\TestCase
     private function isOnline()
     {
 
-        $ch = curl_init('https://packages.pikseraapi.com/packages.json');
+        $ch = curl_init('https://packages.piksera.com/package.json');
         curl_setopt($ch, CURLOPT_TIMEOUT, 5);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

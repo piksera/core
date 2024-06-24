@@ -22,7 +22,7 @@ function get_default_mail_template_by_type($type = '')
     foreach (get_default_mail_templates() as $template) {
         if ($template['type'] == $type) {
 
-            $template['message'] = file_get_contents(normalize_path(dirname(PS_PATH) . '/View/emails') . $template['id']);
+            $template['message'] = file_get_contents(normalize_path(dirname(MW_PATH) . '/View/emails') . $template['id']);
 
             return $template;
         }
@@ -181,7 +181,7 @@ function save_mail_template($data)
 
 function get_mail_template_by_name($name)
 {
-    $content = file_get_contents(normalize_path(dirname(PS_PATH) . '/View/emails') . $name . '.blade.php');
+    $content = file_get_contents(normalize_path(dirname(MW_PATH) . '/View/emails') . $name . '.blade.php');
     if (!empty($content)) {
         return [
             'subject' => $name,

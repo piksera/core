@@ -1,6 +1,6 @@
 <?php
 namespace Microweber;
 
-class LaravelApplication extends \MicroweberPackages\App\LaravelApplication {
+class LaravelApplication extends \PikseraPackages\App\LaravelApplication {
 
 }

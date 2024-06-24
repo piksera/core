@@ -33,7 +33,7 @@ use Illuminate\Support\Facades\Password;
 
 /**
  * Run test
- * @author Bobi Slaveykvo Piksera
+ * @author Bobi Slaveykvo Microweber
  * @command php artisan test --filter UserManager
  */
 

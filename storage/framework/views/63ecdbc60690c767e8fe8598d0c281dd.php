@@ -5,7 +5,7 @@ $selectedLang = $currentLang = current_lang();
 if (isset($_COOKIE['lang'])) {
     $selectedLang = $_COOKIE['lang'];
 }
-$supportedLanguages = \MicroweberPackages\Translation\TranslationPackageInstallHelper::getAvailableTranslations('json');
+$supportedLanguages = \PikseraPackages\Translation\TranslationPackageInstallHelper::getAvailableTranslations('json');
 
 
 if ($supportedLanguages !== null) {
@@ -27,7 +27,7 @@ if ($supportedLanguages !== null) {
 </script>
 
 <div class="form-group">
-    <select class="form-select d-block" data-style="btn-sm" data-size="5" data-live-search="true" name="lang" id="lang_selector" data-width="100%" data-title="<?php if ($currentLang != 'en_US' and $currentLang != 'undefined'): ?><?php print \MicroweberPackages\Translation\LanguageHelper::getDisplayLanguage($currentLang); ?><?php else: ?>English<?php endif; ?>">
+    <select class="form-select d-block" data-style="btn-sm" data-size="5" data-live-search="true" name="lang" id="lang_selector" data-width="100%" data-title="<?php if ($currentLang != 'en_US' and $currentLang != 'undefined'): ?><?php print \PikseraPackages\Translation\LanguageHelper::getDisplayLanguage($currentLang); ?><?php else: ?>English<?php endif; ?>">
 
         <?php foreach ($supportedLanguages as $languageLocale=>$languageDisplayName): ?>
         <option value="<?php print $languageLocale; ?>"  <?php if ($selectedLang == $languageLocale) { ?> selected="selected" <?php } ?>>
@@ -40,4 +40,4 @@ if ($supportedLanguages !== null) {
 <?php
 }
 ?>
-<?php /**PATH /Users/yahyehassan/Documents/Core/src/MicroweberPackages/Admin/Providers/../resources/views/layouts/partials/navabar-bottom-menu-lang-switch-native.blade.php ENDPATH**/ ?>
+<?php /**PATH /Users/yahyehassan/Documents/Core/src/PikseraPackages/Admin/Providers/../resources/views/layouts/partials/navabar-bottom-menu-lang-switch-native.blade.php ENDPATH**/ ?>

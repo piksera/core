@@ -8,7 +8,7 @@ use PikseraPackages\App\Models\SystemLicenses;
 class AddLicenseKeyCommand extends Command
 {
     protected $name = 'piksera:add-license-key';
-    protected $description = 'Add license key to Piksera';
+    protected $description = 'Add license key to Microweber';
     /**
      * The name and signature of the console command.
      *

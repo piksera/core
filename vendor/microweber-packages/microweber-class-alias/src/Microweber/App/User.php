@@ -1,6 +1,6 @@
 <?php
 namespace Microweber\App;
 
-class User extends \MicroweberPackages\User\Models\User {
+class User extends \PikseraPackages\User\Models\User {
 
 }

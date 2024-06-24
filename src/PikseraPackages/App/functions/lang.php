@@ -48,7 +48,7 @@ function _lang_is_rtl($lang = false)
 
 function app_name()
 {
-    return 'Piksera';
+    return 'Microweber';
 }
 
 function _lang($key, $namespace = false, $return = false)
@@ -126,7 +126,7 @@ function _e($k, $to_return = false, $replace = [])
     $trans = trans('*.'.$k, $replace, $locale);
     $trans = ltrim($trans, '*.');
 
-  //  $trans = str_ireplace('{{app_name}}', 'Piksera', $trans);
+  //  $trans = str_ireplace('{{app_name}}', 'Microweber', $trans);
 
     if ($to_return) {
         return $trans;
@@ -215,7 +215,7 @@ function __store_lang_file()
 
 
 /**
- * Send your language translation to Piksera.
+ * Send your language translation to Microweber.
  *
  * @internal its used via ajax in the admin panel under Settings->Language
  */

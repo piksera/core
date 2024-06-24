@@ -18,7 +18,7 @@ use PikseraPackages\Helper\HTMLClean;
 use PikseraPackages\Helper\XSSSecurity;
 use PikseraPackages\Media\Repositories\MediaRepository;
 use PikseraPackages\Menu\Repositories\MenuRepository;
-use PikseraPackages\Piksera\Piksera;
+use PikseraPackages\Microweber\Microweber;
 use PikseraPackages\Module\Repositories\ModuleRepository;
 use PikseraPackages\Multilanguage\Repositories\MultilanguageRepository;
 use PikseraPackages\Multilanguage\TranslateManager;
@@ -115,7 +115,7 @@ use PikseraPackages\Utils\Http\Http;
  * @property Translator                    $translator
  * @property MultilanguageRepository       $multilanguage_repository
  * @property TranslateManager       $translate_manager
- * @property Piksera       $piksera
+ * @property Microweber       $piksera
 
 
 

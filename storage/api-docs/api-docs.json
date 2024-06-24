@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Microweber ApplicationAPI",
+        "title": "Piksera ApplicationAPI",
         "description": "Drag & drop website builder.",
         "contact": {
             "email": "support@microweber.org"

@@ -1,0 +1,1 @@
+piksera-ui::components.input<?php /**PATH /Users/yahyehassan/Documents/Bloggy/storage/framework/views/f66381e15b488632a872094528e58eff.blade.php ENDPATH**/ ?>

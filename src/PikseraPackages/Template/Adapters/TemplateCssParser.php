@@ -52,8 +52,8 @@ class TemplateCssParser
 
         if (isset($outputFileLocations['output']['file']) and (!is_file($outputFileLocations['output']['file']) or !$cache)) {
             $to_generate_css_file = $returnUrl = api_url('template/compile_css?path=' . $lessFilePath . '&option_group=' . $optionGroupName . '&template_folder=' . $themeFolderName . '&token=' . $token);
-            if (!defined('PS_NO_OUTPUT_CACHE')) {
-                define('PS_NO_OUTPUT_CACHE', true);
+            if (!defined('MW_NO_OUTPUT_CACHE')) {
+                define('MW_NO_OUTPUT_CACHE', true);
             }
 
         }
@@ -238,7 +238,7 @@ class TemplateCssParser
 
             $template_url_css_assets = templates_url() . $params['template_folder'] . '/' . dirname(dirname($params['path'])) . '/';
             $cssContent = str_replace('../', $template_url_css_assets, $cssContent);
-            // relative to userfiles/media/default/css/bloggy
+            // relative to userfiles/media/default/css/new-world
              $cssContent = str_replace(userfiles_url(), '../../../../../../', $cssContent);
 
         }
@@ -312,9 +312,9 @@ class TemplateCssParser
         $templateConfig = mw()->template->get_config();
 
         if (isset($templateConfig['version'])) {
-            $lessFilePathWithVersion = $lessFilePath . '.' . PS_V . '-' . $templateConfig['version'];
+            $lessFilePathWithVersion = $lessFilePath . '.' . MW_VERSION . '-' . $templateConfig['version'];
         } else {
-            $lessFilePathWithVersion = $lessFilePath . '.' . PS_V;
+            $lessFilePathWithVersion = $lessFilePath . '.' . MW_VERSION;
         }
 
         $lessDirPath = dirname($lessFilePathWithVersion);

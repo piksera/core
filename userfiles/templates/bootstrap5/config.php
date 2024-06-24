@@ -2,7 +2,7 @@
 
 $config = array();
 $config['name'] = "Bootstrap 5";
-$config['author'] = "Microweber CMS";
+$config['author'] = "Piksera CMS";
 $config['version'] = "1.5";
 $config['url'] = "http://microweber.com";
 

@@ -1,10 +1,10 @@
 {
   "name": "piksera-packages/piksera-option-manager",
-  "description": "Piksera option manager.",
+  "description": "Microweber option manager.",
   "version": "0.0.1",
   "authors": [
     {
-      "name": "Piksera",
+      "name": "Microweber",
       "email": "info@piksera.com"
     },
     {

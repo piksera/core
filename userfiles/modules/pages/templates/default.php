@@ -13,7 +13,7 @@ description: List Navigation
 ?>
 
 <?php
-if (PS_V < '1.2.0') {
+if (MW_VERSION < '1.2.0') {
     $params['ul_class'] = 'nav nav-pills nav-stacked';
     $params['ul_class_deep'] = 'nav nav-pills nav-stacked';
 }

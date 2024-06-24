@@ -1,10 +1,10 @@
 {
   "name": "piksera-packages/piksera-shop",
-  "description": "Piksera Shop.",
+  "description": "Microweber Shop.",
   "version": "0.0.1",
   "authors": [
     {
-      "name": "Piksera",
+      "name": "Microweber",
       "email": "info@piksera.com"
     },
     {

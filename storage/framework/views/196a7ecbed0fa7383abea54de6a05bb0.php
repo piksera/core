@@ -6,4 +6,4 @@ echo app()->parser->process("<module ".app()->format->arrayToHtmlAttributes(['mo
 
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('admin::layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/yahyehassan/Documents/Core/src/MicroweberPackages/Admin/Providers/../resources/views/admin/dashboard.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('admin::layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/yahyehassan/Documents/Core/src/PikseraPackages/Admin/Providers/../resources/views/admin/dashboard.blade.php ENDPATH**/ ?>

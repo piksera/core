@@ -1455,7 +1455,7 @@ mw.askusertostay = false;
     if (!~mw.required.indexOf(toPush)) {
 
       mw.required.push(toPush);
-      url = url.contains("?") ?  url + '&mwv=' + mw.version : url + "?mwv=" + mw.version;
+      url = url.contains("?") ?  url + '&psv=' + mw.version : url + "?psv=" + mw.version;
       if(document.querySelector('link[href="'+url+'"],script[src="'+url+'"]') !== null){
           return
       }
@@ -1578,9 +1578,9 @@ mw.requireAsync = (url, key) => {
 
 
 /*
- * Microweber - Javascript Framework
+ * Piksera - Javascript Framework
  *
- * Copyright (c) Licensed under the Microweber
+ * Copyright (c) Licensed under the Piksera
  * license http://microweber.com/license
  *
  */
@@ -8211,7 +8211,7 @@ mw.tools.notification = function (body, tag, icon) {
     }
     if (n.permission == 'granted') {
         new n("MW Update", {
-            tag: tag || "Microweber",
+            tag: tag || "Piksera",
             body: body,
             icon: icon || mw.settings.includes_url + "img/logomark.png"
         });
@@ -13137,8 +13137,8 @@ $(document).ready(function () {
 const renderBgVideos = function() {
 
     function rend(root) {
-        Array.from(root.querySelectorAll('[data-mwvideo]')).forEach(function(node){
-            var url = node.dataset.mwvideo.trim();
+        Array.from(root.querySelectorAll('[data-psvideo]')).forEach(function(node){
+            var url = node.dataset.psvideo.trim();
             node.innerHTML = `<video src="${url}" autoplay muted loop playsinline></video>`;
         });
     }

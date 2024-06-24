@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Config;
 use PikseraPackages\App\Models\SystemLicenses;
 use PikseraPackages\ComposerClient\Client;
 use PikseraPackages\Install\UpdateMissingConfigFiles;
-use PikseraPackages\Package\PikseraComposerClient;
+use PikseraPackages\Package\MicroweberComposerClient;
 
 if (defined('INI_SYSTEM_CHECK_DISABLED') == false) {
     define('INI_SYSTEM_CHECK_DISABLED', ini_get('disable_functions'));
@@ -51,7 +51,7 @@ class UpdateManager
     {
         $data = array();
         $data['php_version'] = phpversion();
-        $data['mw_version'] = PS_V;
+        $data['mw_version'] = MW_VERSION;
         $data['mw_update_check_site'] = $this->app->url_manager->site();
         $data['update_channel'] = \Config::get('piksera.update_channel');
         $data['last_update'] = \Config::get('piksera.updated_at');
@@ -176,7 +176,7 @@ class UpdateManager
 
     public function perform_post_update_if_needed()
     {
-        if (defined('PS_V')) {
+        if (defined('MW_VERSION')) {
             $websiteOptions = app()->option_repository->getWebsiteOptions();
 
             $app_version = false;
@@ -189,7 +189,7 @@ class UpdateManager
             }
 
             $needPostUpdateAction = false;
-            if ($app_version != PS_V) {
+            if ($app_version != MW_VERSION) {
                 $needPostUpdateAction = true;
             } else if ($app_base_path != base_path()) {
                 $needPostUpdateAction = true;
@@ -248,7 +248,7 @@ class UpdateManager
             $this->_set_time_limit();
 
             $option = array();
-            $option['option_value'] = PS_V;
+            $option['option_value'] = MW_VERSION;
             $option['option_key'] = 'app_version';
             $option['option_group'] = 'website';
             save_option($option);
@@ -304,7 +304,7 @@ class UpdateManager
         if ($post_params != false and is_array($post_params)) {
             $post_params['site_url'] = $this->app->url_manager->site();
             $post_params['api_function'] = $method;
-            $post_params['mw_version'] = PS_V;
+            $post_params['mw_version'] = MW_VERSION;
             $post_params['php_version'] = phpversion();
 
             $curl = new \PikseraPackages\Utils\Http\Http($this->app);
@@ -573,7 +573,7 @@ class UpdateManager
         }
         if (is_file($dl_file)) {
             $unzip = new \PikseraPackages\Utils\Unzip();
-            $target_dir = PS_ROOTPATH;
+            $target_dir = MW_ROOTPATH;
             $result = $unzip->extract($dl_file, $target_dir, $preserve_filepath = true);
 
             return $result;
@@ -678,7 +678,7 @@ class UpdateManager
                  'trace' => $e->getTrace()
              );
          }*/
-        $mw = new PikseraComposerClient();
+        $mw = new MicroweberComposerClient();
         return $mw->requestInstall($params);
     }
 

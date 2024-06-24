@@ -1,6 +1,6 @@
 <?php
 
-//autoload_add_namespace(__DIR__ . '/src/', 'MicroweberPackages\\Template\\NewWorld\\');
+//autoload_add_namespace(__DIR__ . '/src/', 'PikseraPackages\\Template\\NewWorld\\');
 
 api_expose('theme_colors_palette_css');
 

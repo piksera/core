@@ -28,4 +28,4 @@
 
 </div>
 
-<?php /**PATH /Users/yahyehassan/Documents/Core/src/MicroweberPackages/Category/resources/views/admin/category/no-pages.blade.php ENDPATH**/ ?>
+<?php /**PATH /Users/yahyehassan/Documents/Core/src/PikseraPackages/Category/resources/views/admin/category/no-pages.blade.php ENDPATH**/ ?>

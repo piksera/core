@@ -56,4 +56,4 @@ echo $html;
 
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('admin::layouts.app', $extendParams, \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/yahyehassan/Documents/Core/src/MicroweberPackages/Post/resources/views/admin/posts/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('admin::layouts.app', $extendParams, \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/yahyehassan/Documents/Core/src/PikseraPackages/Post/resources/views/admin/posts/index.blade.php ENDPATH**/ ?>

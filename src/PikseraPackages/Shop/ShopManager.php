@@ -1,8 +1,8 @@
 <?php
 /*
- * This file is part of the Piksera framework.
+ * This file is part of the Microweber framework.
  *
- * (c) Piksera CMS LTD
+ * (c) Microweber CMS LTD
  *
  * For full license information see
  * https://github.com/piksera/core/blob/master/LICENSE
@@ -530,7 +530,7 @@ class ShopManager
         }
 
         $row = 1;
-        $cur_file = dirname(PS_PATH) . DS . 'Utils' . DS . 'ThirdPartyLibs' . DS . 'currencies.csv';
+        $cur_file = dirname(MW_PATH) . DS . 'Utils' . DS . 'ThirdPartyLibs' . DS . 'currencies.csv';
         if (is_file($cur_file)) {
             if (($handle = fopen($cur_file, 'r')) !== false) {
                 $res = array();

@@ -4824,7 +4824,7 @@
             "version": "v8",
             "lastModified": "2020-07-23",
             "files": {
-                "regular": "http://fonts.gstatic.com/s/condiment/v8/pONk1hggFNmwvXALyH6Sq4n4o1vyCQ.ttf"
+                "regular": "http://fonts.gstatic.com/s/condiment/v8/pONk1hggFNpsvXALyH6Sq4n4o1vyCQ.ttf"
             },
             "category": "handwriting",
             "kind": "webfonts#webfont"
@@ -20399,7 +20399,7 @@
             "version": "v10",
             "lastModified": "2020-07-23",
             "files": {
-                "regular": "http://fonts.gstatic.com/s/supermercadoone/v10/OpNXnpQWg8jc_xps_Gi14kVVEXOn60b3MClBRTs.ttf"
+                "regular": "http://fonts.gstatic.com/s/supermercadoone/v10/OpNXnpQWg8jc_xmw_Gi14kVVEXOn60b3MClBRTs.ttf"
             },
             "category": "display",
             "kind": "webfonts#webfont"

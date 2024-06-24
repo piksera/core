@@ -4,7 +4,7 @@
  */
 
 
-if (defined('PS_DISABLE_MULTILANGUAGE')) {
+if (defined('MW_DISABLE_MULTILANGUAGE')) {
     return;
 }
 

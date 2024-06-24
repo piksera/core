@@ -399,4 +399,4 @@ if (isset($isShop) and $isShop){
     </div>
 </div>
 </div>
-<?php /**PATH /Users/yahyehassan/Documents/Core/src/MicroweberPackages/Category/resources/views/admin/category/livewire/manage.blade.php ENDPATH**/ ?>
+<?php /**PATH /Users/yahyehassan/Documents/Core/src/PikseraPackages/Category/resources/views/admin/category/livewire/manage.blade.php ENDPATH**/ ?>

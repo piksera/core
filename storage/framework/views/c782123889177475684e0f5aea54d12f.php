@@ -115,4 +115,4 @@ echo $html;
         <?php endif; ?>
     </div>
 </div>
-<?php /**PATH /Users/yahyehassan/Documents/Core/src/MicroweberPackages/Livewire/resources/views/mw-modal.blade.php ENDPATH**/ ?>
+<?php /**PATH /Users/yahyehassan/Documents/Core/src/PikseraPackages/Livewire/resources/views/mw-modal.blade.php ENDPATH**/ ?>

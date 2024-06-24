@@ -1,6 +1,6 @@
 # Bloggy
 
-Bloggy is the Default Microweber template website prepared for online stores. Fully responsive, clean and modern design. 
+Bloggy is the Default Piksera template website prepared for online stores. Fully responsive, clean and modern design. 
 
 ## Features:
 

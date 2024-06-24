@@ -1,9 +1,9 @@
 <?php
 
-namespace MicroweberPackages\Template\NewWorld\tests\Browser;
+namespace PikseraPackages\Template\NewWorld\tests\Browser;
 
 use Laravel\Dusk\Browser;
-use MicroweberPackages\Template\NewWorld\tests\Browser\Components\NewWorldShopProductLinksScraper;
+use PikseraPackages\Template\NewWorld\tests\Browser\Components\NewWorldShopProductLinksScraper;
 use Tests\Browser\Components\AdminContentMultilanguage;
 use Tests\Browser\Components\AdminLogin;
 use Tests\Browser\Components\AdminTemplate;

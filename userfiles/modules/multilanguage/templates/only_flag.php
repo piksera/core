@@ -36,7 +36,7 @@ description: MW Default
             .find('li')
             .on('click', function () {
                 var selected = $(this).data('value');
-                var is_admin = <?php if (defined('PS_FRONTEND')) {
+                var is_admin = <?php if (defined('MW_FRONTEND')) {
                     echo 0;
                 } else {
                     echo 1;

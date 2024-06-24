@@ -1,10 +1,10 @@
 {
   "name": "piksera-packages/piksera-category-manager",
-  "description": "Piksera CMS.",
+  "description": "Microweber CMS.",
   "version": "0.0.1",
   "authors": [
     {
-      "name": "Piksera",
+      "name": "Microweber",
       "email": "info@piksera.com"
     },
     {

@@ -1,8 +1,8 @@
 <?php
 
-if (!defined('PS_WHITE_LABEL_SETTINGS_FILE')) {
-    define('PS_WHITE_LABEL_SETTINGS_FILE', __DIR__ . DIRECTORY_SEPARATOR . 'settings.json');
-    define('PS_WHITE_LABEL_SETTINGS_FILE_LOCAL', storage_path() . DIRECTORY_SEPARATOR . 'branding.json');
+if (!defined('MW_WHITE_LABEL_SETTINGS_FILE')) {
+    define('MW_WHITE_LABEL_SETTINGS_FILE', __DIR__ . DIRECTORY_SEPARATOR . 'settings.json');
+    define('MW_WHITE_LABEL_SETTINGS_FILE_LOCAL', storage_path() . DIRECTORY_SEPARATOR . 'branding.json');
 }
 
 event_bind('mw.admin.settings.website', function ($params = false) {
@@ -17,8 +17,8 @@ event_bind('mw.admin.settings.website', function ($params = false) {
 api_expose_admin('save_white_label_config');
 function save_white_label_config($params)
 {
-    $file = PS_WHITE_LABEL_SETTINGS_FILE;
-    $file_local = PS_WHITE_LABEL_SETTINGS_FILE_LOCAL;
+    $file = MW_WHITE_LABEL_SETTINGS_FILE;
+    $file_local = MW_WHITE_LABEL_SETTINGS_FILE_LOCAL;
 
     if (isset($params['powered_by_link']) and trim(strip_tags($params['powered_by_link'])) == '') {
         unset($params['powered_by_link']);
@@ -35,8 +35,8 @@ function save_white_label_config($params)
 
 function get_white_label_config()
 {
-    $file = PS_WHITE_LABEL_SETTINGS_FILE;
-    $file_local = PS_WHITE_LABEL_SETTINGS_FILE_LOCAL;
+    $file = MW_WHITE_LABEL_SETTINGS_FILE;
+    $file_local = MW_WHITE_LABEL_SETTINGS_FILE_LOCAL;
 
     if (is_file($file_local)) {
         $cont = file_get_contents($file_local);

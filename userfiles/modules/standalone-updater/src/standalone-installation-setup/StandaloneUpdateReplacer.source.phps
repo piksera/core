@@ -2,13 +2,13 @@
 class StandaloneUpdateReplacer
 {
     public $microweberPath;
-    public $newMicroweberPath;
+    public $newPikseraPath;
     public $logger = null;
 
     public function __construct()
     {
         $this->microweberPath = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR;
-        $this->newMicroweberPath = __DIR__ . DIRECTORY_SEPARATOR . 'mw-app-unziped';
+        $this->newPikseraPath = __DIR__ . DIRECTORY_SEPARATOR . 'mw-app-unziped';
     }
 
     public function log($mgs)
@@ -20,8 +20,8 @@ class StandaloneUpdateReplacer
 
     public function replaceFilesExecCleanupStep()
     {
-        $steps_file = $this->newMicroweberPath . DIRECTORY_SEPARATOR . 'replace_steps.json';
-        return $this->deleteDirectoryRecursive($this->newMicroweberPath);
+        $stemw_file = $this->newPikseraPath . DIRECTORY_SEPARATOR . 'replace_steps.json';
+        return $this->deleteDirectoryRecursive($this->newPikseraPath);
     }
 
 
@@ -32,8 +32,8 @@ class StandaloneUpdateReplacer
             $this->deleteOldDirectories();
         }
 
-        $steps_file = $this->newMicroweberPath . DIRECTORY_SEPARATOR . 'replace_steps.json';
-        $step_data = json_decode(file_get_contents($steps_file), true);
+        $stemw_file = $this->newPikseraPath . DIRECTORY_SEPARATOR . 'replace_steps.json';
+        $step_data = json_decode(file_get_contents($stemw_file), true);
 
         $total = count(array_keys($step_data));
 
@@ -54,17 +54,17 @@ class StandaloneUpdateReplacer
 
     public function prepareSteps()
     {
-        if (!is_dir($this->newMicroweberPath)) {
-            mkdir_recursive($this->newMicroweberPath);
+        if (!is_dir($this->newPikseraPath)) {
+            mkdir_recursive($this->newPikseraPath);
         }
-        $steps_file = $this->newMicroweberPath . DIRECTORY_SEPARATOR . 'replace_steps.json';
+        $stemw_file = $this->newPikseraPath . DIRECTORY_SEPARATOR . 'replace_steps.json';
 
         $files = $this->getFilesToCopy();
         // some servers get too many files open error
         $chunks = array_chunk($files, 1024);
 
         $json = json_encode($chunks);
-        file_put_contents($steps_file, $json);
+        file_put_contents($stemw_file, $json);
 
         return count($chunks);
     }
@@ -73,25 +73,25 @@ class StandaloneUpdateReplacer
     {
         $newFilesForCopy = [];
         //add new config files with doNotReplace option
-        $newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newMicroweberPath . DIRECTORY_SEPARATOR . 'config', ['doNotReplace' => true]));
+        $newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newPikseraPath . DIRECTORY_SEPARATOR . 'config', ['doNotReplace' => true]));
 
         //add other files
-        //$newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newMicroweberPath . DIRECTORY_SEPARATOR . 'userfiles' . DIRECTORY_SEPARATOR . 'templates'));
-        $newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newMicroweberPath . DIRECTORY_SEPARATOR . 'userfiles' . DIRECTORY_SEPARATOR . 'modules'));
-        $newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newMicroweberPath . DIRECTORY_SEPARATOR . 'userfiles' . DIRECTORY_SEPARATOR . 'elements'));
-        $newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newMicroweberPath . DIRECTORY_SEPARATOR . 'src'));
-        $newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newMicroweberPath . DIRECTORY_SEPARATOR . 'vendor'));
-        $newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newMicroweberPath . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 'build'));
-        $newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newMicroweberPath . DIRECTORY_SEPARATOR . 'resources'));
+        //$newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newPikseraPath . DIRECTORY_SEPARATOR . 'userfiles' . DIRECTORY_SEPARATOR . 'templates'));
+        $newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newPikseraPath . DIRECTORY_SEPARATOR . 'userfiles' . DIRECTORY_SEPARATOR . 'modules'));
+        $newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newPikseraPath . DIRECTORY_SEPARATOR . 'userfiles' . DIRECTORY_SEPARATOR . 'elements'));
+        $newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newPikseraPath . DIRECTORY_SEPARATOR . 'src'));
+        $newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newPikseraPath . DIRECTORY_SEPARATOR . 'vendor'));
+        $newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newPikseraPath . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 'build'));
+        $newFilesForCopy = array_merge($newFilesForCopy, $this->getFilesFromPath($this->newPikseraPath . DIRECTORY_SEPARATOR . 'resources'));
 
 
-        $newFilesForCopy[] = ['realPath' => $this->newMicroweberPath . DIRECTORY_SEPARATOR . 'composer.lock', 'targetPath' => 'composer.lock'];
-        $newFilesForCopy[] = ['realPath' => $this->newMicroweberPath . DIRECTORY_SEPARATOR . 'composer.json', 'targetPath' => 'composer.json'];
+        $newFilesForCopy[] = ['realPath' => $this->newPikseraPath . DIRECTORY_SEPARATOR . 'composer.lock', 'targetPath' => 'composer.lock'];
+        $newFilesForCopy[] = ['realPath' => $this->newPikseraPath . DIRECTORY_SEPARATOR . 'composer.json', 'targetPath' => 'composer.json'];
 
-        $newFilesForCopy[] = ['realPath' => $this->newMicroweberPath . DIRECTORY_SEPARATOR . 'version.txt', 'targetPath' => 'version.txt'];
-        $newFilesForCopy[] = ['realPath' => $this->newMicroweberPath . DIRECTORY_SEPARATOR . 'ABOUT.md', 'targetPath' => 'ABOUT.md'];
-        $newFilesForCopy[] = ['realPath' => $this->newMicroweberPath . DIRECTORY_SEPARATOR . 'README.md', 'targetPath' => 'README.md'];
-        $newFilesForCopy[] = ['realPath' => $this->newMicroweberPath . DIRECTORY_SEPARATOR . 'CHANGELOG.md', 'targetPath' => 'CHANGELOG.md'];
+        $newFilesForCopy[] = ['realPath' => $this->newPikseraPath . DIRECTORY_SEPARATOR . 'version.txt', 'targetPath' => 'version.txt'];
+        $newFilesForCopy[] = ['realPath' => $this->newPikseraPath . DIRECTORY_SEPARATOR . 'ABOUT.md', 'targetPath' => 'ABOUT.md'];
+        $newFilesForCopy[] = ['realPath' => $this->newPikseraPath . DIRECTORY_SEPARATOR . 'README.md', 'targetPath' => 'README.md'];
+        $newFilesForCopy[] = ['realPath' => $this->newPikseraPath . DIRECTORY_SEPARATOR . 'CHANGELOG.md', 'targetPath' => 'CHANGELOG.md'];
 
 
         return $newFilesForCopy;
@@ -206,7 +206,7 @@ class StandaloneUpdateReplacer
             if (!$fileinfo->isDir()) {
 
                 $targetPath = $fileinfo->getRealPath();
-                $targetPath = str_replace($this->newMicroweberPath, '', $targetPath);
+                $targetPath = str_replace($this->newPikseraPath, '', $targetPath);
                 $options['realPath'] = $fileinfo->getRealPath();
                 $options['targetPath'] = $targetPath;
                 $filesMap[] = $options;

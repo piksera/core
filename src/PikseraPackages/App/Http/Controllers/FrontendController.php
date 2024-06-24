@@ -60,7 +60,7 @@ class FrontendController extends Controller
         if (!$is_installed) {
             $installer = new InstallController($this->app);
             return $installer->index();
-        } elseif (defined('PS_V')) {
+        } elseif (defined('MW_VERSION')) {
                 $this->app->update->perform_post_update_if_needed();
 
         }
@@ -204,8 +204,8 @@ class FrontendController extends Controller
         if (!$is_preview_template) {
             $is_preview_template = false;
             if ($this->return_data == false) {
-                if (!defined('PS_FRONTEND')) {
-                    define('PS_FRONTEND', true);
+                if (!defined('MW_FRONTEND')) {
+                    define('MW_FRONTEND', true);
                 }
             }
 
@@ -386,8 +386,8 @@ class FrontendController extends Controller
                 and !isset($request_params['content_id'])
                 and !isset($request_params['embed_id'])
                 and !is_cli()
-                and !defined('PS_API_CALL')
-                and !defined('PS_NO_SESSION')
+                and !defined('MW_API_CALL')
+                and !defined('MW_NO_SESSION')
             ) {
 
 
@@ -400,20 +400,20 @@ class FrontendController extends Controller
             }
         }
         if (isset($is_preview_template) and $is_preview_template != false) {
-            if (!defined('PS_NO_SESSION')) {
-                define('PS_NO_SESSION', true);
+            if (!defined('MW_NO_SESSION')) {
+                define('MW_NO_SESSION', true);
             }
         }
 
         if (isset($request_params['recart']) and $request_params['recart'] != false) {
             event_trigger('recover_shopping_cart', $request_params['recart']);
         }
-        if (!defined('PS_NO_OUTPUT_CACHE')) {
+        if (!defined('MW_NO_OUTPUT_CACHE')) {
             if (!$back_to_editmode and !$is_editmode and $enable_full_page_cache and $output_cache_timeout != false and isset($_SERVER['REQUEST_URI']) and $_SERVER['REQUEST_URI']) {
                 $compile_assets = \Config::get('piksera.compile_assets');
 
                 $output_cache_content = false;
-                $output_cache_id = 'full_page_cache_' . __FUNCTION__ . crc32(PS_V . intval($compile_assets) . intval(is_https()) . $_SERVER['REQUEST_URI'] . current_lang() . site_url());
+                $output_cache_id = 'full_page_cache_' . __FUNCTION__ . crc32(MW_VERSION . intval($compile_assets) . intval(is_https()) . $_SERVER['REQUEST_URI'] . current_lang() . site_url());
                 $output_cache_group = 'global';
                 $output_cache_content_data = $this->app->cache_manager->get($output_cache_id, $output_cache_group, $output_cache_timeout);
 
@@ -1013,7 +1013,7 @@ class FrontendController extends Controller
 
             // used for preview from the admin wysiwyg
             if (isset($request_params['isolate_content_field'])) {
-                require_once PS_PATH . 'Utils' . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'phpQuery.php';
+                require_once MW_PATH . 'Utils' . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'phpQuery.php';
                 $pq = \phpQuery::newDocument($l);
 
                 $isolated_head = pq('head')->eq(0)->html();
@@ -1095,7 +1095,7 @@ class FrontendController extends Controller
                 and !isset($request_params['isolate_content_field'])
                 and !isset($request_params['embed_id'])
                 and !is_cli()
-                and !defined('PS_API_CALL')
+                and !defined('MW_API_CALL')
             ) {
                 event_trigger('mw.pageview');
             }
@@ -1105,7 +1105,7 @@ class FrontendController extends Controller
             //$apijs_loaded = $this->app->template->get_apijs_url() . '?id=' . CONTENT_ID;
 
             $is_admin = app()->user_manager->is_admin();
-            // $default_css = '<link rel="stylesheet" href="' . mw_includes_url() . 'default.css?v=' . PS_V . '" type="text/css" />';
+            // $default_css = '<link rel="stylesheet" href="' . mw_includes_url() . 'default.css?v=' . MW_VERSION . '" type="text/css" />';
 
 // moved to src/PikseraPackages/MetaTags/Entities/SystemDefaultCssHeadTags.php
 //            $default_css_url = $this->app->template->get_default_system_ui_css_url();
@@ -1290,7 +1290,7 @@ class FrontendController extends Controller
 
 
             // moved to src/PikseraPackages/MetaTags/Entities/GeneratorHeadTag.php
-//            if (defined('PS_V')) {
+//            if (defined('MW_VERSION')) {
 //                $generator_tag = "\n" . '<meta name="generator" content="' . addslashes(mw()->ui->brand_name()) . '" />' . "\n";
 //                $l = str_ireplace('</head>', $generator_tag . '</head>', $l, $rep_count);
 //            }
@@ -1389,7 +1389,7 @@ class FrontendController extends Controller
             if ($this->isolate_by_html_id != false) {
                 $id_sel = $this->isolate_by_html_id;
                 $this->isolate_by_html_id = false;
-                require_once PS_PATH . 'Utils' . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'phpQuery.php';
+                require_once MW_PATH . 'Utils' . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'phpQuery.php';
                 $pq = \phpQuery::newDocument($l);
                 foreach ($pq['#' . $id_sel] as $elem) {
                     $l = pq($elem)->htmlOuter();
@@ -1399,7 +1399,7 @@ class FrontendController extends Controller
                 app()->user_manager->session_set('last_content_id', CONTENT_ID);
             }
             if (isset($output_cache_content) and $enable_full_page_cache and $output_cache_timeout != false) {
-                if (!defined('PS_NO_OUTPUT_CACHE')) {
+                if (!defined('MW_NO_OUTPUT_CACHE')) {
                     $output_cache_content_save = [];
                     $l = $this->app->parser->replace_non_cached_modules_with_placeholders($l);
 
@@ -1429,7 +1429,7 @@ class FrontendController extends Controller
             }
 
             $response = \Response::make($l);
-            if (defined('PS_NO_OUTPUT_CACHE')
+            if (defined('MW_NO_OUTPUT_CACHE')
                 or $is_editmode == true
                 or $is_editmode_iframe == true
                 or (strstr($l, 'image-generate-tn-request'))) {
@@ -1453,12 +1453,12 @@ class FrontendController extends Controller
 
     public function m()
     {
-        if (!defined('PS_API_CALL')) {
-            define('PS_API_CALL', true);
+        if (!defined('MW_API_CALL')) {
+            define('MW_API_CALL', true);
         }
 
-        if (!defined('PS_NO_OUTPUT')) {
-            define('PS_NO_OUTPUT', true);
+        if (!defined('MW_NO_OUTPUT')) {
+            define('MW_NO_OUTPUT', true);
         }
 
         return $this->module();
@@ -1478,7 +1478,7 @@ class FrontendController extends Controller
         }
 
         if ($updateSitemap) {
-            $map = new \Piksera\Utils\Sitemap($sm_file);
+            $map = new \Microweber\Utils\Sitemap($sm_file);
             $map->file = $sm_file;
 
             // >>> Add categories
@@ -1522,11 +1522,11 @@ class FrontendController extends Controller
             return $res;
         }
 
-        if (defined('PS_API_RAW')) {
+        if (defined('MW_API_RAW')) {
             return response($res);
         }
 
-        if (!defined('PS_API_HTML_OUTPUT')) {
+        if (!defined('MW_API_HTML_OUTPUT')) {
             if (is_bool($res) or is_int($res)) {
                 return \Response::make(json_encode($res), $status_code);
             } elseif ($res instanceof RedirectResponse) {
@@ -1591,7 +1591,7 @@ class FrontendController extends Controller
     public function show_404()
     {
         header('HTTP/1.0 404 Not Found');
-        $v = new View(PS_ADMIN_VIEWS_DIR . '404.php');
+        $v = new View(MW_ADMIN_VIEWS_DIR . '404.php');
         echo $v;
     }
 

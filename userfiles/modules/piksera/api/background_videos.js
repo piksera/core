@@ -1,8 +1,8 @@
 const renderBgVideos = function() {
 
     function rend(root) {
-        Array.from(root.querySelectorAll('[data-mwvideo]')).forEach(function(node){
-            var url = node.dataset.mwvideo.trim();
+        Array.from(root.querySelectorAll('[data-psvideo]')).forEach(function(node){
+            var url = node.dataset.psvideo.trim();
             node.innerHTML = `<video src="${url}" autoplay muted loop playsinline></video>`;
         });
     }

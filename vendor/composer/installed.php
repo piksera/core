@@ -3,7 +3,7 @@
         'name' => 'piksera/core',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '2a5138b88c899fe6a215f0af813d262e09413569',
+        'reference' => '5b1b1a0abced609c71ef692a56a5121e5eb17e07',
         'type' => 'application',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -974,7 +974,7 @@
         'lcobucci/jwt' => array(
             'pretty_version' => '5.4.x-dev',
             'version' => '5.4.9999999.9999999-dev',
-            'reference' => '0e8a0c9183a37fccd8d3526673a6f061add28c73',
+            'reference' => '871f751483551452fa4caaa14b01b15702d8752a',
             'type' => 'library',
             'install_path' => __DIR__ . '/../lcobucci/jwt',
             'aliases' => array(),
@@ -1742,7 +1742,7 @@
         'phpstan/phpstan' => array(
             'pretty_version' => '1.11.x-dev',
             'version' => '1.11.9999999.9999999-dev',
-            'reference' => '4c4695efa144a5ec93d887f7146627dc5e74a82c',
+            'reference' => 'f2b984c41ecfeca01e2534eb099d5897b0400fe2',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpstan/phpstan',
             'aliases' => array(),
@@ -1805,7 +1805,7 @@
         'piksera/core' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '2a5138b88c899fe6a215f0af813d262e09413569',
+            'reference' => '5b1b1a0abced609c71ef692a56a5121e5eb17e07',
             'type' => 'application',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

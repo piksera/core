@@ -141,12 +141,12 @@ class StandaloneUpdateExecutor
         if ($filesInZip) {
             $chunks = array_chunk($filesInZip, 200);
 
-            $steps_file = __DIR__ . DIRECTORY_SEPARATOR . 'unzip_steps.json';
+            $stemw_file = __DIR__ . DIRECTORY_SEPARATOR . 'unzip_steps.json';
 
             $json = json_encode($chunks);
-            file_put_contents($steps_file, $json);
+            file_put_contents($stemw_file, $json);
 
-            return ['status' => 'success', 'unzip_steps_needed' => count($chunks)];
+            return ['status' => 'success', 'unzip_stemw_needed' => count($chunks)];
 
         }
 
@@ -176,8 +176,8 @@ class StandaloneUpdateExecutor
         $zip = new \ZipArchive;
         $res = $zip->open(__DIR__ . DIRECTORY_SEPARATOR . $zipFile);
         if ($res === TRUE) {
-            $steps_file = __DIR__ . DIRECTORY_SEPARATOR . 'unzip_steps.json';
-            $steps = json_decode(file_get_contents($steps_file), true);
+            $stemw_file = __DIR__ . DIRECTORY_SEPARATOR . 'unzip_steps.json';
+            $steps = json_decode(file_get_contents($stemw_file), true);
             if (isset($steps[$step])) {
                 $files = $steps[$step];
                 $logOnce = false;
@@ -237,7 +237,7 @@ class StandaloneUpdateExecutor
         $replace = new StandaloneUpdateReplacer();
         $steps = $replace->prepareSteps();
 
-        return ['status' => 'success', 'steps_needed' => $steps];
+        return ['status' => 'success', 'stemw_needed' => $steps];
 
     }
 

@@ -375,9 +375,9 @@ gesture e155
 get_app e884
 gif e908
 golf_course eb45
-gps_fixed e1b3
-gps_not_fixed e1b4
-gps_off e1b5
+gmw_fixed e1b3
+gmw_not_fixed e1b4
+gmw_off e1b5
 grade e885
 gradient e3e9
 grain e3ea

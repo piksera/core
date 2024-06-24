@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "72ab32f5d0c3243295f719480d5d1377",
+    "content-hash": "ff378ae1172857733b1951dc91edcb16",
     "packages": [
         {
             "name": "akaunting/laravel-money",
@@ -5408,12 +5408,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lcobucci/jwt.git",
-                "reference": "0e8a0c9183a37fccd8d3526673a6f061add28c73"
+                "reference": "871f751483551452fa4caaa14b01b15702d8752a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/0e8a0c9183a37fccd8d3526673a6f061add28c73",
-                "reference": "0e8a0c9183a37fccd8d3526673a6f061add28c73",
+                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/871f751483551452fa4caaa14b01b15702d8752a",
+                "reference": "871f751483551452fa4caaa14b01b15702d8752a",
                 "shasum": ""
             },
             "require": {
@@ -5474,7 +5474,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2024-06-21T10:56:55+00:00"
+            "time": "2024-06-24T03:10:36+00:00"
         },
         {
             "name": "league/commonmark",
@@ -17317,12 +17317,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "4c4695efa144a5ec93d887f7146627dc5e74a82c"
+                "reference": "f2b984c41ecfeca01e2534eb099d5897b0400fe2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/4c4695efa144a5ec93d887f7146627dc5e74a82c",
-                "reference": "4c4695efa144a5ec93d887f7146627dc5e74a82c",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f2b984c41ecfeca01e2534eb099d5897b0400fe2",
+                "reference": "f2b984c41ecfeca01e2534eb099d5897b0400fe2",
                 "shasum": ""
             },
             "require": {
@@ -17368,7 +17368,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-06-24T07:59:03+00:00"
+            "time": "2024-06-24T10:12:03+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",

@@ -1,8 +1,8 @@
 <?php
 /*
- * This file is part of the Piksera framework.
+ * This file is part of the Microweber framework.
  *
- * (c) Piksera CMS LTD
+ * (c) Microweber CMS LTD
  *
  * For full license information see
  * https://github.com/piksera/core/blob/master/LICENSE
@@ -76,7 +76,7 @@ MultilanguageServiceProvider extends ServiceProvider
             $isMultilanguageActive = true;
         }
 
-        if (defined('PS_DISABLE_MULTILANGUAGE')) {
+        if (defined('MW_DISABLE_MULTILANGUAGE')) {
             $isMultilanguageActive = false;
         }
         /**
@@ -140,12 +140,12 @@ MultilanguageServiceProvider extends ServiceProvider
 
             $currentUrl = mw()->url_manager->current();
             if ($currentUrl !== api_url('multilanguage/change_language')) {
-                if (!defined('PS_DISABLE_MULTILANGUAGE')) {
+                if (!defined('MW_DISABLE_MULTILANGUAGE')) {
                     if (MultilanguageHelpers::multilanguageIsEnabled()) {
                         run_translate_manager();
                     }
                 }
-//                if (!defined('PS_DISABLE_MULTILANGUAGE')) {
+//                if (!defined('MW_DISABLE_MULTILANGUAGE')) {
 //                    run_translate_manager();
 //                }
             }

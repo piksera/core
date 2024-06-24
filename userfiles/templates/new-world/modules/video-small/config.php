@@ -2,7 +2,7 @@
 
 $config = array();
 $config['name'] = "Video";
-$config['author'] = "Microweber";
+$config['author'] = "Piksera";
 $config['categories'] = "media";
 $config['position'] = "5";
 $config['version'] = 0.1;

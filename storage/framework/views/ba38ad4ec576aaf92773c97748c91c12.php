@@ -35,4 +35,4 @@ echo app()->parser->process("<module ".app()->format->arrayToHtmlAttributes(['mo
 
 </body>
 </html>
-<?php /**PATH /Users/yahyehassan/Documents/Core/src/MicroweberPackages/User/Providers/../resources/views/admin/auth/index.blade.php ENDPATH**/ ?>
+<?php /**PATH /Users/yahyehassan/Documents/Core/src/PikseraPackages/User/Providers/../resources/views/admin/auth/index.blade.php ENDPATH**/ ?>

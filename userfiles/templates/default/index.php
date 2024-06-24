@@ -24,7 +24,7 @@
     <div class="mw-col" style="width: 50%">
       <div class="mw-col-container" id="mw-welcome">
 
-          <h2 class="element">Welcome to Microweber</h2>
+          <h2 class="element">Welcome to Piksera</h2>
           <p class="element">This is the default theme of (MW). </p>
           <br>
           <h4 class="element">You are able to create your own Website, Blog, Online Shop or anything you need, for free.</h4>
@@ -64,7 +64,7 @@
 
 
              * template - Name of the template.
-               Templates provided from Microweber:
+               Templates provided from Piksera:
                  - default - loads when no template is specified
                  - 3 columns
                  - 4 columns
@@ -126,7 +126,7 @@
 
 
              * template - Name of the template.
-               Templates provided from Microweber:
+               Templates provided from Piksera:
                  - default - loads when no template is specified
                  - 3 columns
                  - 4 columns

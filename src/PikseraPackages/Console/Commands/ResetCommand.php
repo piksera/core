@@ -10,7 +10,7 @@ use PikseraPackages\Install\ModulesInstaller;
 class ResetCommand extends Command
 {
     protected $name = 'piksera:reset';
-    protected $description = 'Reset Piksera';
+    protected $description = 'Reset Microweber';
 
 
     /**

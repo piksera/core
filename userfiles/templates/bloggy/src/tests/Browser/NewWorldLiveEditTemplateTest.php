@@ -1,12 +1,12 @@
 <?php
 
-namespace MicroweberPackages\Template\NewWorld\tests\Browser;
+namespace PikseraPackages\Template\NewWorld\tests\Browser;
 
 use Illuminate\Support\Facades\Auth;
 use Laravel\Dusk\Browser;
-use MicroweberPackages\Page\Models\Page;
-use MicroweberPackages\Template\NewWorld\tests\Browser\Components\NewWorldShopProductLinksScraper;
-use MicroweberPackages\User\Models\User;
+use PikseraPackages\Page\Models\Page;
+use PikseraPackages\Template\NewWorld\tests\Browser\Components\NewWorldShopProductLinksScraper;
+use PikseraPackages\User\Models\User;
 use Tests\Browser\Components\AdminLogin;
 use Tests\Browser\Components\ChekForJavascriptErrors;
 use Tests\DuskTestCase;
@@ -72,7 +72,7 @@ class NewWorldLiveEditTemplateTest extends DuskTestCase
 
             $browser->pause(3000);
 
-        //    $browser->waitForText('template of Microweber',30);
+        //    $browser->waitForText('template of Piksera',30);
             $browser->waitForText('Call to action',30);
 
             $browser->within(new ChekForJavascriptErrors(), function ($browser) {

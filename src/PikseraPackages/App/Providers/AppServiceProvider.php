@@ -22,9 +22,9 @@ use PikseraPackages\Content\Models\Content;
 use PikseraPackages\Core\Providers\CoreServiceProvider;
 use PikseraPackages\Dusk\DuskServiceProvider;
 use PikseraPackages\Helper\Format;
-use PikseraPackages\Install\PikseraMigrator;
+use PikseraPackages\Install\MicroweberMigrator;
 use PikseraPackages\Media\Models\Media;
-use PikseraPackages\Piksera\Providers\PikseraServiceProvider;
+use PikseraPackages\Microweber\Providers\MicroweberServiceProvider;
 use PikseraPackages\Multilanguage\Http\Middleware\MultilanguageMiddleware;
 use PikseraPackages\Multilanguage\MultilanguageHelpers;
 use PikseraPackages\Utils\Http\Http;
@@ -32,7 +32,7 @@ use PikseraPackages\Utils\System\ClassLoader;
 
 // Shop
 
-if (!defined('PS_V')) {
+if (!defined('MW_VERSION')) {
     include_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'bootstrap.php';
 }
 
@@ -181,7 +181,7 @@ class AppServiceProvider extends ServiceProvider
 
         $this->aliasInstance->alias('Carbon', 'Carbon\Carbon');
 
-        $this->app->register(PikseraServiceProvider::class);
+        $this->app->register(MicroweberServiceProvider::class);
 
 
 
@@ -210,14 +210,14 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->singleton('mw_migrator', function ($app) {
             $repository = $app['migration.repository'];
-            return new PikseraMigrator($repository, $app['db'], $app['files'], $app['events']);
+            return new MicroweberMigrator($repository, $app['db'], $app['files'], $app['events']);
         });
 
         foreach ($this->laravel_providers as $provider) {
             $this->app->register($provider);
         }
 
-      //  $this->app->bind('Illuminate\Contracts\Auth\Registrar', 'Piksera\App\Services\Registrar');
+      //  $this->app->bind('Illuminate\Contracts\Auth\Registrar', 'Microweber\App\Services\Registrar');
 
         $this->app->singleton(
             'Illuminate\Cache\StoreInterface',
@@ -269,13 +269,13 @@ class AppServiceProvider extends ServiceProvider
         }
 
 
-        if (defined('PS_UNIT_TEST')) {
+        if (defined('MW_UNIT_TEST')) {
             $this->app->detectEnvironment(function () {
-                if (!defined('PS_UNIT_TEST_ENV_FROM_TEST')) {
+                if (!defined('MW_UNIT_TEST_ENV_FROM_TEST')) {
                     return 'testing';
                 }
 
-                return PS_UNIT_TEST_ENV_FROM_TEST;
+                return MW_UNIT_TEST_ENV_FROM_TEST;
             });
         }
 

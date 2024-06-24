@@ -76,11 +76,11 @@ event_bind('mw.pageview', function ($params = false) {
 
 
         $compile_assets = \Config::get('piksera.compile_assets');   //$compile_assets =  \Config::get('piksera.compile_assets');
-        if ($compile_assets and defined('PS_V')) {
+        if ($compile_assets and defined('MW_VERSION')) {
             $userfiles_dir = userfiles_path();
             $userfiles_cache_dir = normalize_path($userfiles_dir . 'cache' . DS . 'apijs' . DS);
             $hash = crc32(site_url() . $src_code);
-            $userfiles_cache_filename = $userfiles_cache_dir . 'ping.' . $hash . '.' . PS_V . '.js';
+            $userfiles_cache_filename = $userfiles_cache_dir . 'ping.' . $hash . '.' . MW_VERSION . '.js';
             if (!is_file($userfiles_cache_filename)) {
                 if (!is_dir(userfiles_url() . 'cache/apijs/')) {
                     @mkdir_recursive(userfiles_url() . 'cache/apijs/');
@@ -89,7 +89,7 @@ event_bind('mw.pageview', function ($params = false) {
             }
 
             if (is_file($userfiles_cache_filename)) {
-                $traker_url = userfiles_url() . 'cache/apijs/' . 'ping.' . $hash . '.' . PS_V . '.js';
+                $traker_url = userfiles_url() . 'cache/apijs/' . 'ping.' . $hash . '.' . MW_VERSION . '.js';
                 $src = '<script async defer type="text/javascript" src="' . $traker_url . '"></script>';
             }
 

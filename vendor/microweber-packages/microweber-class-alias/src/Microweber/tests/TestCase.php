@@ -1,6 +1,6 @@
 <?php
 namespace Microweber\tests;
 
-class TestCase extends \MicroweberPackages\Core\tests\TestCase {
+class TestCase extends \PikseraPackages\Core\tests\TestCase {
 
 }

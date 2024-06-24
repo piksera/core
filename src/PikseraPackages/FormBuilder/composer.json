@@ -1,10 +1,10 @@
 {
   "name": "piksera-packages/piksera-forms-builder",
-  "description": "Piksera forms builder.",
+  "description": "Microweber forms builder.",
   "version": "0.0.1",
   "authors": [
     {
-      "name": "Piksera",
+      "name": "Microweber",
       "email": "info@piksera.com"
     },
     {

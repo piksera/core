@@ -9,7 +9,7 @@ Allows you to save data to ANY table in the database.
 
     db_save($table, $data);
 
-This is one of the core Piksera function and most of the other _save_ functions are really wrappers to this one. It allows you to save data anywhere in any db table.
+This is one of the core Microweber function and most of the other _save_ functions are really wrappers to this one. It allows you to save data anywhere in any db table.
 
 
 **Note: This is raw function and does not validate data input or user permissions. **
@@ -129,7 +129,7 @@ db_delete — deletes a record from a database table
 
 
 ## Defining Schema
-When installing a module Piksera checks the `config.php` file for the `$config['tables']` array.
+When installing a module Microweber checks the `config.php` file for the `$config['tables']` array.
 Each key represents a table name and its value is an array of column definitions.
 The ID column is automatically created and all columns are nullable by default.
 

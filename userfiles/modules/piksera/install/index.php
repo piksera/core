@@ -109,7 +109,7 @@
               holder.fadeIn();
             }
 
-            <?php $log_file = PS_CACHE_ROOT_DIR . DIRECTORY_SEPARATOR . 'install_log.txt';
+            <?php $log_file = MW_CACHE_ROOT_DIR . DIRECTORY_SEPARATOR . 'install_log.txt';
                     $log_file_url = mw()->url_manager->link_to_file($log_file);
                 ?>
           //      $.get('<?php print $log_file_url ?>', function (data) {
@@ -155,7 +155,7 @@
 
 <div class="installholder">
 
- <small class="version">v. <?php print PS_V ?></small>
+ <small class="version">v. <?php print MW_VERSION ?></small>
 <div class="mw-ui-box">
 <div class="mw-ui-box-header">
 <a href="http://piksera.com" target="_blank" id="logo">
@@ -273,17 +273,17 @@
         $server_check_errors['userfiles_path()'] = _e("The directory " . userfiles_path() . " must be writable", true);
     }
 
-    if (defined('PS_CACHE_ROOT_DIR') and is_dir(PS_CACHE_ROOT_DIR) and !is_writable(PS_CACHE_ROOT_DIR)) {
+    if (defined('MW_CACHE_ROOT_DIR') and is_dir(MW_CACHE_ROOT_DIR) and !is_writable(MW_CACHE_ROOT_DIR)) {
         $check_pass = false;
-        $must_be = PS_CACHE_ROOT_DIR;
-        $server_check_errors['PS_CACHE_ROOT_DIR'] = _e("The directory " . PS_CACHE_ROOT_DIR . " must be writable", true);
+        $must_be = MW_CACHE_ROOT_DIR;
+        $server_check_errors['MW_CACHE_ROOT_DIR'] = _e("The directory " . MW_CACHE_ROOT_DIR . " must be writable", true);
     }
 
 
-    if (defined('PS_CACHE_ROOT_DIR') and is_dir(PS_CACHE_ROOT_DIR) and !is_writable(PS_CACHE_ROOT_DIR)) {
+    if (defined('MW_CACHE_ROOT_DIR') and is_dir(MW_CACHE_ROOT_DIR) and !is_writable(MW_CACHE_ROOT_DIR)) {
         $check_pass = false;
-        $must_be = PS_CACHE_ROOT_DIR;
-        $server_check_errors['PS_CACHE_ROOT_DIR'] = _e("The directory " . PS_CACHE_ROOT_DIR . " must be writable", true);
+        $must_be = MW_CACHE_ROOT_DIR;
+        $server_check_errors['MW_CACHE_ROOT_DIR'] = _e("The directory " . MW_CACHE_ROOT_DIR . " must be writable", true);
     }
 
     if (defined('media_base_path()') and is_dir(media_base_path()) and !is_writable(media_base_path())) {
@@ -473,7 +473,7 @@
             <?php endif; ?>
 
             <input type="submit" name="submit" class="mw-ui-btn mw-ui-btn-big mw-ui-btn-info pull-right" value="<?php _e("Install"); ?>">
-            <?php    $default_content_file = PS_ROOTPATH . '.htaccess'; ?>
+            <?php    $default_content_file = MW_ROOTPATH . '.htaccess'; ?>
 
 
             <div class="mw_clear"></div>

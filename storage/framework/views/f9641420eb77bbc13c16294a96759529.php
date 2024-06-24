@@ -9,4 +9,4 @@
         });
     }
 </script>
-<?php /**PATH /Users/yahyehassan/Documents/Core/src/MicroweberPackages/Content/resources/views/admin/content/index-scripts.blade.php ENDPATH**/ ?>
+<?php /**PATH /Users/yahyehassan/Documents/Core/src/PikseraPackages/Content/resources/views/admin/content/index-scripts.blade.php ENDPATH**/ ?>

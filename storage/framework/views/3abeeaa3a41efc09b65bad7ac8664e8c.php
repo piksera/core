@@ -24,4 +24,4 @@ if ($item->getAttribute('route') == Route::currentRouteName()) {
 
     </a>
 </li>
-<?php /**PATH /Users/yahyehassan/Documents/Core/src/MicroweberPackages/Admin/Providers/../resources/views/layouts/partials/navbar-link.blade.php ENDPATH**/ ?>
+<?php /**PATH /Users/yahyehassan/Documents/Core/src/PikseraPackages/Admin/Providers/../resources/views/layouts/partials/navbar-link.blade.php ENDPATH**/ ?>

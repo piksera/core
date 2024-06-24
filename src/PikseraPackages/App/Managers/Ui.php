@@ -9,7 +9,7 @@ class Ui
     public $admin_logo_login = '';
     public $admin_logo_login_link = false;
     public $logo_live_edit = '';
-    public $brand_name = 'Piksera';
+    public $brand_name = 'Microweber';
     public $powered_by_link = false;
     public $disable_powered_by_link = false;
     public $disable_marketplace = false;
@@ -96,7 +96,7 @@ class Ui
 
         $notif_count = 0;
 
-//        if (defined('PS_BACKEND') and PS_BACKEND) {
+//        if (defined('MW_BACKEND') and MW_BACKEND) {
 //            $notif_count_updates_data = mw()->update->get_updates_notifications('limit=1');
 //
 //            if (isset($notif_count_updates_data[0])
@@ -138,7 +138,7 @@ class Ui
         $this->module('admin.dashboard.menu.third', $admin_dashboard_btn);
 
         $admin_dashboard_btn = array();
-        $admin_dashboard_btn['link'] = 'https://piksera.com/contact-us';
+        $admin_dashboard_btn['link'] = 'https://piksera.com/contact/-us';
         $admin_dashboard_btn['text'] = _e('Suggest a feature', true);
         $admin_dashboard_btn['icon_class'] = 'mdi mdi-penguin';
         $this->module('admin.dashboard.menu.third', $admin_dashboard_btn);
@@ -264,7 +264,7 @@ class Ui
         if ($this->disable_powered_by_link != false) {
             return;
         }
-        $link = '<span class="mw-powered-by"><a class="tblr-body-color" href="https://piksera.com/" title="Create website">Create a website</a> with <a class="tblr-body-color" href="https://piksera.org" target="_blank" title="Website Builder">Piksera</a></span>';
+        $link = '<span class="mw-powered-by"><a class="tblr-body-color" href="https://piksera.com/" title="Create website">Create a website</a> with <a class="tblr-body-color" href="https://piksera.org" target="_blank" title="Website Builder">Microweber</a></span>';
         if ($this->powered_by_link != false) {
             $link = $this->powered_by_link;
         }

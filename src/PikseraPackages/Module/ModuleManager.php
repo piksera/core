@@ -2,9 +2,9 @@
 
 
 /*
- * This file is part of the Piksera framework.
+ * This file is part of the Microweber framework.
  *
- * (c) Piksera CMS LTD
+ * (c) Microweber CMS LTD
  *
  * For full license information see
  * https://github.com/piksera/core/blob/master/LICENSE
@@ -60,7 +60,7 @@ class ModuleManager
     /*
      ['name' => 'User Roles',
             'icon' => 'icon.png',
-            'author' => 'Piksera',
+            'author' => 'Microweber',
             'description' => 'User Roles',
             'website' => 'http://piksera.com/',
             'help' => 'http://piksera.info/modules',
@@ -155,7 +155,7 @@ class ModuleManager
          $moduleConfig = array();
          $moduleConfig['name'] = $module['name'];
          $moduleConfig['icon'] = $moduleIcon;
-         $moduleConfig['author'] = "Piksera";
+         $moduleConfig['author'] = "Microweber";
          $moduleConfig['description'] = $module['name'];
          $moduleConfig['website'] = "http://piksera.com/";
          $moduleConfig['help'] = "http://piksera.info/modules";
@@ -308,11 +308,11 @@ class ModuleManager
                         $moduleDir = str_replace(modules_path(), '', $moduleDir);
                     }
 
-                    $replace_root = PS_ROOTPATH . DS . 'userfiles' . DS . 'modules' . DS;
+                    $replace_root = MW_ROOTPATH . DS . 'userfiles' . DS . 'modules' . DS;
 
                     $moduleDir = str_replace($replace_root, '', $moduleDir);
 
-                    $replace_root = dirname(dirname(PS_PATH)) . DS . 'userfiles' . DS . 'modules' . DS;
+                    $replace_root = dirname(dirname(MW_PATH)) . DS . 'userfiles' . DS . 'modules' . DS;
                     $moduleDir = str_replace($replace_root, '', $moduleDir);
 
                     $moduleDir = rtrim($moduleDir, '\\');

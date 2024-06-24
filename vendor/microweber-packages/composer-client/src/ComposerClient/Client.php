@@ -1,9 +1,9 @@
 <?php
 
-namespace MicroweberPackages\ComposerClient;
+namespace PikseraPackages\ComposerClient;
 
-use MicroweberPackages\App\Models\SystemLicenses;
-use MicroweberPackages\ComposerClient\Traits\FileDownloader;
+use PikseraPackages\App\Models\SystemLicenses;
+use PikseraPackages\ComposerClient\Traits\FileDownloader;
 
 class Client
 {
@@ -11,7 +11,7 @@ class Client
 
     public $licenses = [];
     public $packageServers = [
-        'https://packages.piksera.com/package.json',
+        'https://packages.microweberapi.com/packages.json',
     ];
 
     public function __construct()
@@ -57,9 +57,9 @@ class Client
             if (!empty($headers)) {
                 $opts[CURLOPT_HTTPHEADER] = $headers;
             }
-
+            
             curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0); // Skip SSL Verification
-
+            
             curl_setopt_array($curl, $opts);
 
             $response = curl_exec($curl);
@@ -247,7 +247,7 @@ class Client
         }
 
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0); // Skip SSL Verification
-
+        
         curl_setopt_array($curl, $opts);
 
         $response = curl_exec($curl);

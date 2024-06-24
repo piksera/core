@@ -83,8 +83,8 @@ description:  Skin 2
                     <div class="img-holder" style="background-image: url('<?php print template_url(); ?>assets/uploads/testimonial4.png');"></div>
                     <div class="info-holder">
                         <h3>Steven Doe</h3>
-                        <h4>CEO, Microweber</h4>
-                        <p>This team is awesome. I get a great supportand deffenetely recoment Microweber for your next website! </p>
+                        <h4>CEO, Piksera</h4>
+                        <p>This team is awesome. I get a great supportand deffenetely recoment Piksera for your next website! </p>
                     </div>
                 </div>
             </div>
@@ -93,8 +93,8 @@ description:  Skin 2
                     <div class="img-holder" style="background-image: url('<?php print template_url(); ?>assets/uploads/testimonial2.png');"></div>
                     <div class="info-holder">
                         <h3>Joana Hanna</h3>
-                        <h4>CEO, Microweber</h4>
-                        <p>This team is awesome. I get a great supportand deffenetely recoment Microweber for your next website! </p>
+                        <h4>CEO, Piksera</h4>
+                        <p>This team is awesome. I get a great supportand deffenetely recoment Piksera for your next website! </p>
                     </div>
                 </div>
             </div>
@@ -103,8 +103,8 @@ description:  Skin 2
                     <div class="img-holder" style="background-image: url('<?php print template_url(); ?>assets/uploads/testimonial3.png');"></div>
                     <div class="info-holder">
                         <h3>John Doe</h3>
-                        <h4>CEO, Microweber</h4>
-                        <p>This team is awesome. I get a great supportand deffenetely recoment Microweber for your next website! </p>
+                        <h4>CEO, Piksera</h4>
+                        <p>This team is awesome. I get a great supportand deffenetely recoment Piksera for your next website! </p>
                     </div>
                 </div>
             </div>
@@ -113,8 +113,8 @@ description:  Skin 2
                     <div class="img-holder" style="background-image: url('<?php print template_url(); ?>assets/uploads/testimonial1.png');"></div>
                     <div class="info-holder">
                         <h3>Steven Doe</h3>
-                        <h4>CEO, Microweber</h4>
-                        <p>This team is awesome. I get a great supportand deffenetely recoment Microweber for your next website! </p>
+                        <h4>CEO, Piksera</h4>
+                        <p>This team is awesome. I get a great supportand deffenetely recoment Piksera for your next website! </p>
                     </div>
                 </div>
             </div>
@@ -123,8 +123,8 @@ description:  Skin 2
                     <div class="img-holder" style="background-image: url('<?php print template_url(); ?>assets/uploads/testimonial2.png');"></div>
                     <div class="info-holder">
                         <h3>Joana Hanna</h3>
-                        <h4>CEO, Microweber</h4>
-                        <p>This team is awesome. I get a great supportand deffenetely recoment Microweber for your next website! </p>
+                        <h4>CEO, Piksera</h4>
+                        <p>This team is awesome. I get a great supportand deffenetely recoment Piksera for your next website! </p>
                     </div>
                 </div>
             </div>
@@ -133,8 +133,8 @@ description:  Skin 2
                     <div class="img-holder" style="background-image: url('<?php print template_url(); ?>assets/uploads/testimonial3.png');"></div>
                     <div class="info-holder">
                         <h3>John Doe</h3>
-                        <h4>CEO, Microweber</h4>
-                        <p>This team is awesome. I get a great supportand deffenetely recoment Microweber for your next website! </p>
+                        <h4>CEO, Piksera</h4>
+                        <p>This team is awesome. I get a great supportand deffenetely recoment Piksera for your next website! </p>
                     </div>
                 </div>
             </div>

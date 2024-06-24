@@ -1,13 +1,13 @@
 <?php
 
-if (PS_V < '1.2.0') {
+if (MW_VERSION < '1.2.0') {
     event_bind('mw.admin.header.toolbar', function () {
         echo '<div class="mw-ui-col pull-right">
          <module type="multilanguage/change_language"></module>
     </div>';
     });
 }
-if (PS_V >= '1.2.0') {
+if (MW_VERSION >= '1.2.0') {
     event_bind('mw.admin.header.toolbar.ul', function () {
         echo '<module type="multilanguage" show_settings_link="true" template="admin_v1.2"></module>';
     });

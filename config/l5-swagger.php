@@ -31,8 +31,8 @@ return [
                  * Absolute paths to directory containing the swagger annotations are stored.
                 */
                 'annotations' => [
-                   // base_path('src/MicroweberPackages/OpenApi'),
-                     base_path('src/MicroweberPackages'),
+                   // base_path('src/PikseraPackages/OpenApi'),
+                     base_path('src/PikseraPackages'),
                 ],
 
             ],

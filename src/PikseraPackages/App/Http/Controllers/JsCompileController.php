@@ -38,8 +38,8 @@ class JsCompileController extends Controller
 
     public function apijs()
     {
-        if (!defined('PS_NO_SESSION')) {
-            define('PS_NO_SESSION', 1);
+        if (!defined('MW_NO_SESSION')) {
+            define('MW_NO_SESSION', 1);
         }
         $last_modified_time = 0;
 
@@ -48,22 +48,22 @@ class JsCompileController extends Controller
             $last_modified_time = @filemtime($file);
         }
         if ($last_modified_time) {
-            if (defined('PS_V')) {
-                $etag = md5($last_modified_time . PS_V);
+            if (defined('MW_VERSION')) {
+                $etag = md5($last_modified_time . MW_VERSION);
             } else {
                 $etag = $last_modified_time;
             }
         }
         $l = $this->_load_apijs();
         $compile_assets = $this->_should_compile_assets;   //$compile_assets =  \Config::get('piksera.compile_assets');
-        if ($compile_assets and defined('PS_V')) {
+        if ($compile_assets and defined('MW_VERSION')) {
             // it makes an error
             $l = $this->minify_js($l);
 
             $userfiles_dir = userfiles_path();
             $hash = $this->apijs_combined_get_hash();
             $userfiles_cache_dir = normalize_path($userfiles_dir . 'cache' . DS . 'apijs');
-            $userfiles_cache_filename = $userfiles_cache_dir . 'api.' . $hash . '.' . PS_V . '.js';
+            $userfiles_cache_filename = $userfiles_cache_dir . 'api.' . $hash . '.' . MW_VERSION . '.js';
             if (!is_file($userfiles_cache_filename)) {
                 if (!is_dir($userfiles_cache_dir)) {
                     mkdir_recursive($userfiles_cache_dir);
@@ -103,14 +103,14 @@ class JsCompileController extends Controller
 
     public function apijs_settings()
     {
-        if (!defined('PS_NO_SESSION')) {
-            define('PS_NO_SESSION', 1);
+        if (!defined('MW_NO_SESSION')) {
+            define('MW_NO_SESSION', 1);
         }
 
         $l = $this->_load_apijs_settings();
 
         $compile_assets = $this->_should_compile_assets;   //$compile_assets =  \Config::get('piksera.compile_assets');
-        if ($compile_assets and defined('PS_V')) {
+        if ($compile_assets and defined('MW_VERSION')) {
             $l = $this->minify_js($l);
             $hash = $this->apijs_combined_get_hash();
             $userfiles_dir = userfiles_path();
@@ -157,7 +157,7 @@ class JsCompileController extends Controller
                 $suffix = 'admin_' . crc32(mw_admin_prefix_url());
             }
         }
-        $hash = crc32(site_url() . template_dir() . current_lang()) . '.' . $suffix . '.' . PS_V;
+        $hash = crc32(site_url() . template_dir() . current_lang()) . '.' . $suffix . '.' . MW_VERSION;
 
         return $hash;
     }
@@ -177,11 +177,11 @@ class JsCompileController extends Controller
         $layout = implode("\n\n", $layout);
 
         $layout = str_replace('{SITE_URL}', $this->app->url_manager->site(), $layout);
-        $layout = str_replace('{PS_SITE_URL}', $this->app->url_manager->site(), $layout);
+        $layout = str_replace('{MW_SITE_URL}', $this->app->url_manager->site(), $layout);
         $layout = str_replace('%7BSITE_URL%7D', $this->app->url_manager->site(), $layout);
 
         $compile_assets = $this->_should_compile_assets;
-        if ($compile_assets and defined('PS_V')) {
+        if ($compile_assets and defined('MW_VERSION')) {
 
             if (!is_dir($userfiles_cache_dir)) {
                 mkdir_recursive($userfiles_cache_dir);
@@ -203,8 +203,8 @@ class JsCompileController extends Controller
 
     public function apijs_liveedit()
     {
-        if (!defined('PS_NO_SESSION')) {
-            define('PS_NO_SESSION', 1);
+        if (!defined('MW_NO_SESSION')) {
+            define('MW_NO_SESSION', 1);
         }
 
         $file = mw_includes_path() . 'api' . DS . 'liveedit.js';
@@ -213,8 +213,8 @@ class JsCompileController extends Controller
 
         $ifModifiedSince = (isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) ? $_SERVER['HTTP_IF_MODIFIED_SINCE'] : false);
         $etagHeader = (isset($_SERVER['HTTP_IF_NONE_MATCH']) ? trim($_SERVER['HTTP_IF_NONE_MATCH']) : false);
-        if (defined('PS_V')) {
-            $etag = md5(filemtime($file) . PS_V);
+        if (defined('MW_VERSION')) {
+            $etag = md5(filemtime($file) . MW_VERSION);
         } else {
             $etag = filemtime($file);
         }
@@ -224,12 +224,12 @@ class JsCompileController extends Controller
 
         $l = $l->__toString();
         $l = str_replace('{SITE_URL}', $this->app->url_manager->site(), $l);
-        $l = str_replace('{PS_SITE_URL}', $this->app->url_manager->site(), $l);
+        $l = str_replace('{MW_SITE_URL}', $this->app->url_manager->site(), $l);
         $l = str_replace('%7BSITE_URL%7D', $this->app->url_manager->site(), $l);
 
 
         $compile_assets = $this->_should_compile_assets;   //$compile_assets =  \Config::get('piksera.compile_assets');
-        if ($compile_assets and defined('PS_V')) {
+        if ($compile_assets and defined('MW_VERSION')) {
             $l = $this->minify_js($l);
 
             $userfiles_dir = userfiles_path();
@@ -237,8 +237,8 @@ class JsCompileController extends Controller
             $userfiles_cache_dir = normalize_path($userfiles_dir . 'cache' . DS . 'apijs');
             $userfiles_cache_filename = $userfiles_cache_dir . 'api.liveedit.' . $hash . '.js';
             if (!is_file($userfiles_cache_filename)) {
-                if (!defined('PS_NO_OUTPUT_CACHE')) {
-                    define('PS_NO_OUTPUT_CACHE', true);
+                if (!defined('MW_NO_OUTPUT_CACHE')) {
+                    define('MW_NO_OUTPUT_CACHE', true);
                 }
                 if (!is_dir($userfiles_cache_dir)) {
                     mkdir_recursive($userfiles_cache_dir);
@@ -276,9 +276,9 @@ class JsCompileController extends Controller
     {
 
 
-        $url = $this->app->url_manager->site('apijs') . '?mwv=' . PS_V;
+        $url = $this->app->url_manager->site('apijs') . '?mwv=' . MW_VERSION;
         $compile_assets = $this->_should_compile_assets;   //$compile_assets =  \Config::get('piksera.compile_assets');
-        if ($compile_assets and defined('PS_V')) {
+        if ($compile_assets and defined('MW_VERSION')) {
             $userfiles_dir = userfiles_path();
             $userfiles_cache_dir = normalize_path($userfiles_dir . 'cache' . DS . 'apijs' . DS);
             $hash = $this->apijs_combined_get_hash();
@@ -294,11 +294,11 @@ class JsCompileController extends Controller
 
     public function get_apijs_settings_url()
     {
-        $url = $this->app->url_manager->site('apijs_settings') . '?mwv=' . PS_V;;
+        $url = $this->app->url_manager->site('apijs_settings') . '?mwv=' . MW_VERSION;;
         $compile_assets = $this->_should_compile_assets;   //$compile_assets =  \Config::get('piksera.compile_assets');
 
 
-        if ($compile_assets and defined('PS_V')) {
+        if ($compile_assets and defined('MW_VERSION')) {
             $userfiles_dir = userfiles_path();
             $file = mw_includes_path() . 'api' . DS . 'api_settings.js';
             $mtime = false;
@@ -323,7 +323,7 @@ class JsCompileController extends Controller
     public function get_apijs_combined_url()
     {
 
-        $url = $this->app->url_manager->site('apijs_combined') . '?mwv=' . PS_V;
+        $url = $this->app->url_manager->site('apijs_combined') . '?mwv=' . MW_VERSION;
 
         $compile_assets = $this->_should_compile_assets;   //$compile_assets =  \Config::get('piksera.compile_assets');
 
@@ -342,9 +342,9 @@ class JsCompileController extends Controller
 
     public function get_liveeditjs_url()
     {
-        $url = $this->app->url_manager->site('apijs_liveedit') . '?mwv=' . PS_V;
+        $url = $this->app->url_manager->site('apijs_liveedit') . '?mwv=' . MW_VERSION;
         $compile_assets = $this->_should_compile_assets;   //$compile_assets =  \Config::get('piksera.compile_assets');
-        if ($compile_assets and defined('PS_V')) {
+        if ($compile_assets and defined('MW_VERSION')) {
             $userfiles_dir = userfiles_path();
             $file = mw_includes_path() . 'api' . DS . 'liveedit.js';
             $mtime = false;
@@ -353,7 +353,7 @@ class JsCompileController extends Controller
             }
 
             $userfiles_cache_dir = normalize_path($userfiles_dir . 'cache' . DS . 'apijs' . DS);
-            $fn = 'api.liveedit.' . md5(site_url() . template_dir() . $mtime) . '.' . PS_V . '.js';
+            $fn = 'api.liveedit.' . md5(site_url() . template_dir() . $mtime) . '.' . MW_VERSION . '.js';
             $userfiles_cache_filename = $userfiles_cache_dir . $fn;
             if (is_file($userfiles_cache_filename)) {
                 $url = userfiles_url() . 'cache/apijs/' . $fn;
@@ -371,7 +371,7 @@ class JsCompileController extends Controller
         // has error on minifier
         $optimize_asset_loading = get_option('optimize_asset_loading', 'website');
         if ($optimize_asset_loading == 'y') {
-            $minifier = normalize_path(PS_PATH . 'Utils/lib/JShrink/Minifier.php', false);
+            $minifier = normalize_path(MW_PATH . 'Utils/lib/JShrink/Minifier.php', false);
             if (is_file($minifier)) {
                 include_once $minifier;
 
@@ -399,7 +399,7 @@ class JsCompileController extends Controller
 
         $l = $l->__toString();
         $l = str_replace('{SITE_URL}', $this->app->url_manager->site(), $l);
-        $l = str_replace('{PS_SITE_URL}', $this->app->url_manager->site(), $l);
+        $l = str_replace('{MW_SITE_URL}', $this->app->url_manager->site(), $l);
         $l = str_replace('%7BSITE_URL%7D', $this->app->url_manager->site(), $l);
         return $l;
     }

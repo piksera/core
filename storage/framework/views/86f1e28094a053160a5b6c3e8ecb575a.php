@@ -1,5 +1,5 @@
 <?php
-use MicroweberPackages\Multilanguage\MultilanguageHelpers;
+use PikseraPackages\Multilanguage\MultilanguageHelpers;
 
 if (!MultilanguageHelpers::multilanguageIsEnabled()) {
     ?>
@@ -20,7 +20,7 @@ if (MultilanguageHelpers::multilanguageIsEnabled()) {
     $supportedLanguages = get_supported_languages(true);
 } else {
     $supportedLanguages = array();
-    $supportedLanguagesFiles = \MicroweberPackages\Translation\TranslationPackageInstallHelper::getAvailableTranslations('json');
+    $supportedLanguagesFiles = \PikseraPackages\Translation\TranslationPackageInstallHelper::getAvailableTranslations('json');
 
 
     //$getTranslationLocalesImported =  app()->translation_key_repostory->getImportedLocales();
@@ -53,7 +53,7 @@ if ($supportedLanguages) {
                 id="lang_selector_admin_footer"
                 data-width="100%"
 
-                data-title="<?php if ($currentLang != 'en_US' and $currentLang != 'undefined'): ?><?php print \MicroweberPackages\Translation\LanguageHelper::getDisplayLanguage($currentLang); ?><?php else: ?>English<?php endif; ?>">
+                data-title="<?php if ($currentLang != 'en_US' and $currentLang != 'undefined'): ?><?php print \PikseraPackages\Translation\LanguageHelper::getDisplayLanguage($currentLang); ?><?php else: ?>English<?php endif; ?>">
                 <?php foreach ($supportedLanguages as $language): ?>
 
                 <?php
@@ -110,4 +110,4 @@ if ($supportedLanguages) {
 </script>
 <?php } ?>
 
-<?php /**PATH /Users/yahyehassan/Documents/Core/src/MicroweberPackages/Admin/Providers/../resources/views/layouts/partials/navabar-bottom-menu-lang-switch.blade.php ENDPATH**/ ?>
+<?php /**PATH /Users/yahyehassan/Documents/Core/src/PikseraPackages/Admin/Providers/../resources/views/layouts/partials/navabar-bottom-menu-lang-switch.blade.php ENDPATH**/ ?>

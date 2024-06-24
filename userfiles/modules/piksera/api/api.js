@@ -127,7 +127,7 @@ $.ajaxSetup({
 
 
 
-mw.version = "<?php print PS_V; ?>";
+mw.version = "<?php print MW_VERSION; ?>";
 
 mw.pauseSave = false;
 
@@ -333,7 +333,7 @@ mw.askusertostay = false;
     if (!~mw.required.indexOf(toPush)) {
 
       mw.required.push(toPush);
-      url = url.contains("?") ?  url + '&mwv=' + mw.version : url + "?mwv=" + mw.version;
+      url = url.contains("?") ?  url + '&psv=' + mw.version : url + "?psv=" + mw.version;
       if(document.querySelector('link[href="'+url+'"],script[src="'+url+'"]') !== null){
           return
       }

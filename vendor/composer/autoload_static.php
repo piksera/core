@@ -230,11 +230,11 @@ class ComposerStaticInit97d9ac87c680d93eea55acc8e876875b
             'PikseraPackages\\Role\\' => 21,
             'PikseraPackages\\Repository\\' => 27,
             'PikseraPackages\\Queue\\' => 22,
-            'PikseraPackages\\Piksera\\' => 24,
             'PikseraPackages\\Package\\' => 24,
             'PikseraPackages\\Order\\' => 22,
             'PikseraPackages\\Option\\' => 23,
             'PikseraPackages\\Module\\' => 23,
+            'PikseraPackages\\Microweber\\' => 27,
             'PikseraPackages\\MetaTags\\' => 25,
             'PikseraPackages\\Menu\\' => 21,
             'PikseraPackages\\Media\\tests\\' => 28,
@@ -294,7 +294,6 @@ class ComposerStaticInit97d9ac87c680d93eea55acc8e876875b
             'Money\\' => 6,
             'Mockery\\' => 8,
             'Microweber\\' => 11,
-            'MicroweberPackages\\' => 19,
             'MaxMind\\WebService\\' => 19,
             'MaxMind\\Exception\\' => 18,
             'MaxMind\\Db\\' => 11,
@@ -886,10 +885,6 @@ class ComposerStaticInit97d9ac87c680d93eea55acc8e876875b
         array (
             0 => __DIR__ . '/../..' . '/src/PikseraPackages/Queue',
         ),
-        'PikseraPackages\\Piksera\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/PikseraPackages/Piksera',
-        ),
         'PikseraPackages\\Package\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/PikseraPackages/Package',
@@ -905,6 +900,10 @@ class ComposerStaticInit97d9ac87c680d93eea55acc8e876875b
         'PikseraPackages\\Module\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/PikseraPackages/Module',
+        ),
+        'PikseraPackages\\Microweber\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/PikseraPackages/Microweber',
         ),
         'PikseraPackages\\MetaTags\\' => 
         array (
@@ -1009,6 +1008,7 @@ class ComposerStaticInit97d9ac87c680d93eea55acc8e876875b
         'PikseraPackages\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/PikseraPackages',
+            1 => __DIR__ . '/..' . '/microweber-packages/composer-client/src',
         ),
         'PhpParser\\' => 
         array (
@@ -1105,10 +1105,6 @@ class ComposerStaticInit97d9ac87c680d93eea55acc8e876875b
         'Microweber\\' => 
         array (
             0 => __DIR__ . '/..' . '/microweber-packages/microweber-class-alias/src/Microweber',
-        ),
-        'MicroweberPackages\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/microweber-packages/composer-client/src',
         ),
         'MaxMind\\WebService\\' => 
         array (

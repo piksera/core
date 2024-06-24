@@ -6,7 +6,7 @@ use PikseraPackages\Utils\Mail\MailSender;
 
 /**
  * Run test
- * @author Bobi Slaveykvo Piksera
+ * @author Bobi Slaveykvo Microweber
  * @command php phpunit.phar --filter MailSenderTest
  */
 class MailSenderTest extends TestCase
@@ -18,7 +18,7 @@ class MailSenderTest extends TestCase
         $replyTo = 'Reply to';
         $content = 'This is example message.';
         $from = 'peter@piksera.com';
-        $fromName = 'Peter Piksera';
+        $fromName = 'Peter Microweber';
 
         $mail = new MailSender();
         $mail->setEmailTo($to);

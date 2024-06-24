@@ -103,4 +103,4 @@
    </div>
 
 </div>
-<?php /**PATH /Users/yahyehassan/Documents/Core/src/MicroweberPackages/Module/resources/views/livewire/admin/list-modules.blade.php ENDPATH**/ ?>
+<?php /**PATH /Users/yahyehassan/Documents/Core/src/PikseraPackages/Module/resources/views/livewire/admin/list-modules.blade.php ENDPATH**/ ?>

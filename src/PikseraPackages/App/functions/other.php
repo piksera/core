@@ -20,7 +20,7 @@ function mw_admin_prefix_url()
 
 
 /**
- *  Piksera common functions.
+ *  Microweber common functions.
  */
 api_expose_admin('reorder_modules');
 
@@ -250,7 +250,7 @@ function module_templates($module_name, $template_name = false, $is_settings = f
  *
  * @return array
  *
- * @author    Piksera Dev Team
+ * @author    Microweber Dev Team
  *
  * @since     Version 1.0
  */
@@ -299,7 +299,7 @@ function save_module_as_template($data_to_save)
  *
  * $params['cache_group'] = 'modules/global'; // allows custom cache group
  * $params['cleanup_db'] = true; //if true will reinstall all modules if skip_save is false
- * $params['is_elements'] = true;  //if true will list files from the PS_ELEMENTS_DIR
+ * $params['is_elements'] = true;  //if true will list files from the MW_ELEMENTS_DIR
  *
  * $data = scan_for_modules($params);
  * @return mixed Array with modules or false
@@ -632,7 +632,7 @@ function lnotif($text, $class = 'success')
     $editmode_sess = mw()->user_manager->session_get('editmode');
 
 
-    if (defined('PS_BACKEND') and PS_BACKEND != false) {
+    if (defined('MW_BACKEND') and MW_BACKEND != false) {
         return false;
     }
     if (defined('IN_EDIT') and IN_EDIT != false) {
@@ -876,7 +876,7 @@ function captcha($params = false)
 // */
 //function captcha_url($params=false)
 //{
-//	return Piksera\Utils\Captcha::url($params);
+//	return Microweber\Utils\Captcha::url($params);
 //}
 
 function mw_error($e, $f = false, $l = false)

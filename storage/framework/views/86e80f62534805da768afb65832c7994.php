@@ -41,4 +41,4 @@
     }
 </script>
 
-<?php /**PATH /Users/yahyehassan/Documents/Core/src/MicroweberPackages/Content/resources/views/admin/content/livewire/table-includes/table-tr-reoder-js.blade.php ENDPATH**/ ?>
+<?php /**PATH /Users/yahyehassan/Documents/Core/src/PikseraPackages/Content/resources/views/admin/content/livewire/table-includes/table-tr-reoder-js.blade.php ENDPATH**/ ?>

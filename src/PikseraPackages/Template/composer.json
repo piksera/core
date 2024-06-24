@@ -1,10 +1,10 @@
 {
   "name": "piksera-packages/piksera-template-manager",
-  "description": "Piksera template manager.",
+  "description": "Microweber template manager.",
   "version": "0.0.1",
   "authors": [
     {
-      "name": "Piksera",
+      "name": "Microweber",
       "email": "info@piksera.com"
     },
     {

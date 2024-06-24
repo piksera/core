@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Cache;
 use Livewire\Component;
 use Livewire\WithPagination;
 use PikseraPackages\Admin\Http\Livewire\AdminComponent;
-use PikseraPackages\Package\PikseraComposerClient;
-use PikseraPackages\Package\PikseraComposerPackage;
+use PikseraPackages\Package\MicroweberComposerClient;
+use PikseraPackages\Package\MicroweberComposerPackage;
 
 class Marketplace extends AdminComponent
 {
@@ -55,7 +55,7 @@ class Marketplace extends AdminComponent
     {
 
         $packages = Cache::remember('livewire-marketplace', Carbon::now()->addHours(12), function () {
-            $marketplace = new PikseraComposerClient();
+            $marketplace = new MicroweberComposerClient();
             return $marketplace->search();
         });
 
@@ -111,7 +111,7 @@ class Marketplace extends AdminComponent
                     continue;
                 }
             }
-            $latestVersionPackage = PikseraComposerPackage::format($latestVersionPackage);
+            $latestVersionPackage = MicroweberComposerPackage::format($latestVersionPackage);
 
             $latestVersions[$packageName] = $latestVersionPackage;
         }

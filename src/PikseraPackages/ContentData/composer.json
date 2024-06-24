@@ -1,10 +1,10 @@
 {
   "name": "piksera-packages/piksera-content-data",
-  "description": "Piksera Content Data",
+  "description": "Microweber Content Data",
   "version": "0.0.1",
   "authors": [
     {
-      "name": "Piksera",
+      "name": "Microweber",
       "email": "info@piksera.com"
     },
     {

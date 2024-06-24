@@ -30,14 +30,14 @@ abstract class DuskTestCase extends BaseTestCase
     protected function setUp(): void
     {
 
-        if (!defined('PS_UNIT_TEST')) {
-            define('PS_UNIT_TEST', true);
+        if (!defined('MW_UNIT_TEST')) {
+            define('MW_UNIT_TEST', true);
         }
 
         $_ENV['APP_ENV'] = 'testing';
         putenv('APP_ENV=testing');
-        if (!defined('PS_SITE_URL')) {
-            define('PS_SITE_URL', $this->siteUrl);
+        if (!defined('MW_SITE_URL')) {
+            define('MW_SITE_URL', $this->siteUrl);
         }
         parent::setUp();
     }

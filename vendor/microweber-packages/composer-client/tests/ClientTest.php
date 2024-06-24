@@ -1,9 +1,9 @@
 <?php
 
-namespace MicroweberPackages\ComposerClient;
+namespace PikseraPackages\ComposerClient;
 
 use PHPUnit\Framework\TestCase;
-use MicroweberPackages\ComposerClient\Client;
+use PikseraPackages\ComposerClient\Client;
 
 class ClientTest extends TestCase
 {

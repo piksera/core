@@ -30,7 +30,7 @@ $layout_classes = ' ' . $classes['padding_top'] . ' ' . $classes['padding_bottom
                 <div class="row">
                     <div class="order-2 order-lg-1 text-center text-sm-center text-lg-start text-lg-left  col-md-10 mx-auto col-lg-7 m-b-20 d-flex flex-column justify-content-center align-items-center">
                         <div class="allow-drop">
-                            <h1 class="m-b-30">Making the web a better place with Microweber</h1>
+                            <h1 class="m-b-30">Making the web a better place with Piksera</h1>
                             <p>The Website builder is an open-source content management system and website builder. It is based on the PHP programming language and the Laravel 5 web application framework, using drag and drop and allowing users to quickly create content, while scheduling and managing multiple
                                 displays.</p>
                             <div class="element m-t-50 text-center text-lg-end text-lg-start">

@@ -26,7 +26,7 @@
 
                 <?php event_trigger('mw.admin.sidebar.li.first'); ?>
 
-                <?php $__currentLoopData = \MicroweberPackages\Admin\Facades\AdminManager::getMenu('left_menu_top'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php $__currentLoopData = \PikseraPackages\Admin\Facades\AdminManager::getMenu('left_menu_top'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <?php if(method_exists($item, 'getChildren') && !empty($item->getChildren())): ?>
                         <?php echo $__env->make('admin::layouts.partials.navbar-dropdown-link', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <?php else: ?>
@@ -34,7 +34,7 @@
                     <?php endif; ?>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-                <?php $__currentLoopData = \MicroweberPackages\Admin\Facades\AdminManager::getMenu('left_menu_bottom'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php $__currentLoopData = \PikseraPackages\Admin\Facades\AdminManager::getMenu('left_menu_bottom'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <?php if(method_exists($item, 'items')): ?>
                         <?php echo $__env->make('admin::layouts.partials.navbar-dropdown-link', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <?php else: ?>
@@ -203,4 +203,4 @@
         });
     </script>
 </aside>
-<?php /**PATH /Users/yahyehassan/Documents/Core/src/MicroweberPackages/Admin/Providers/../resources/views/layouts/partials/navbar.blade.php ENDPATH**/ ?>
+<?php /**PATH /Users/yahyehassan/Documents/Core/src/PikseraPackages/Admin/Providers/../resources/views/layouts/partials/navbar.blade.php ENDPATH**/ ?>

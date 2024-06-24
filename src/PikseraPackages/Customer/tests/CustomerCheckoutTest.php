@@ -9,7 +9,7 @@ use PikseraPackages\Customer\Models\Customer;
 
 /**
  * Run test
- * @author Bobi Piksera
+ * @author Bobi Microweber
  * @command php phpunit.phar --filter CheckoutTest
  */
 class CustomerCheckoutTest extends TestCase
@@ -73,7 +73,7 @@ class CustomerCheckoutTest extends TestCase
         $checkoutDetails = array();
         $checkoutDetails['email'] = 'client_' . uniqid() . '@piksera.com';
         $checkoutDetails['first_name'] = 'Client First Name';
-        $checkoutDetails['last_name'] = 'Piksera Last Name';
+        $checkoutDetails['last_name'] = 'Microweber Last Name';
         $checkoutDetails['phone'] = '08812345' . rand(100, 999);
         $checkoutDetails['address'] = 'Business Park, Mladost 4';
         $checkoutDetails['address2'] = 'Business Park, Mladost 6';
@@ -121,7 +121,7 @@ class CustomerCheckoutTest extends TestCase
         $checkoutDetails = array();
         $checkoutDetails['email'] = 'client_' . uniqid() . '@piksera.com';
         $checkoutDetails['first_name'] = 'Client First Name<script>alert(1)</script>' . $xss;
-        $checkoutDetails['last_name'] = 'Piksera Last Name' . $xss;
+        $checkoutDetails['last_name'] = 'Microweber Last Name' . $xss;
         $checkoutDetails['phone'] = '08812345' . rand(100, 999) . $xss;
         $checkoutDetails['address'] = 'Business Park, Mladost 4' . $xss;
         $checkoutDetails['address2'] = 'Business Park, Mladost 6' . $xss;

@@ -106,8 +106,8 @@
         $.get("actions.php?unzippApp=1&format=json", function (data) {
             if (data.unzipping.unzipped) {
                 $.get("actions.php?replaceFilesPrepareStepsNeeded=1&format=json", function (data) {
-                    if (data.replace_steps.steps_needed) {
-                        execReplaceStepsAjax(data.replace_steps.steps_needed)
+                    if (data.replace_steps.stemw_needed) {
+                        execReplaceStepsAjax(data.replace_steps.stemw_needed)
                     } else {
                         $('.js-update-log').html("Can't prepare replace steps.");
                     }
@@ -122,8 +122,8 @@
 
     function startUnzipAjaxOnMultiSteps() {
         $.get("actions.php?unzippAppGetNumberOfStepsNeeded=1&format=json", function (data) {
-            if (data.unzipping.unzip_steps_needed) {
-                execUnzipChunkStepsAjax(data.unzipping.unzip_steps_needed)
+            if (data.unzipping.unzip_stemw_needed) {
+                execUnzipChunkStepsAjax(data.unzipping.unzip_stemw_needed)
             } else {
                 $('.js-update-log').html("Cannot open the zip with updates file.");
             }
@@ -180,8 +180,8 @@
 
 
                             $.get("actions.php?replaceFilesPrepareStepsNeeded=1&format=json", function (data) {
-                                if (data.replace_steps.steps_needed) {
-                                    execReplaceStepsAjax(data.replace_steps.steps_needed)
+                                if (data.replace_steps.stemw_needed) {
+                                    execReplaceStepsAjax(data.replace_steps.stemw_needed)
                                 } else {
                                     $('.js-update-log').html("Can't prepare replace steps.");
                                 }

@@ -12,7 +12,7 @@ class TemplateInstallerTest extends TestCase
     {
         $logger = new MyCustomLogger();
 
-        Config::set('piksera.install_default_template', 'bloggy');
+        Config::set('piksera.install_default_template', 'new-world');
         Config::set('piksera.install_default_template_content', 1);
 
         $installer = new TemplateInstaller();

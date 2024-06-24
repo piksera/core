@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 class UpdateCommand extends Command
 {
     protected $name = 'piksera:update';
-    protected $description = 'Update Piksera';
+    protected $description = 'Update Microweber';
     /**
      * The name and signature of the console command.
      *

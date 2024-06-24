@@ -58,7 +58,7 @@ class CheckoutClientTest extends TestCase
         $checkoutDetails = array();
         $checkoutDetails['email'] = $email;
         $checkoutDetails['first_name'] = 'Client';
-        $checkoutDetails['last_name'] = 'Piksera';
+        $checkoutDetails['last_name'] = 'Microweber';
         $checkoutDetails['phone'] = '08812345678';
         $checkoutDetails['address'] = 'Business Park, Mladost 4';
         $checkoutDetails['city'] = 'Sofia';

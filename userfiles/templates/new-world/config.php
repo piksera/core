@@ -2,20 +2,20 @@
 
 $config = array();
 $config['name'] = "New World";
-$config['author'] = "Microweber";
+$config['author'] = "Piksera";
 $config['version'] = '6.3';
 $config['url'] = "http://microweber.com";
 $config['standalone_module_skins'] = true;
 $config['framework'] = "bootstrap5";
 
 $config['settings']['service_provider'] = [
-    \MicroweberPackages\Template\NewWorld\TemplateServiceProvider::class
+    \PikseraPackages\Template\NewWorld\TemplateServiceProvider::class
 ];
 
 $config['settings']['autoload_namespace'] = [
     [
         'path' => __DIR__ . '/src/',
-        'namespace' => 'MicroweberPackages\\Template\\NewWorld'
+        'namespace' => 'PikseraPackages\\Template\\NewWorld'
     ],
 ];
 

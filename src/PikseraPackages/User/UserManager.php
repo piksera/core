@@ -11,7 +11,7 @@ use Laravel\Socialite\SocialiteManager;
 use PikseraPackages\App\Http\RequestRoute;
 use PikseraPackages\App\LoginAttempt;
 use PikseraPackages\User\Models\User;
-use PikseraPackages\User\Socialite\PikseraProvider;
+use PikseraPackages\User\Socialite\MicroweberProvider;
 
 
 class UserManager
@@ -748,15 +748,15 @@ class UserManager
     public function save($params)
     {
         $force = false;
-        if (defined('PS_FORCE_USER_SAVE')) {
-            $force = PS_FORCE_USER_SAVE;
+        if (defined('MW_FORCE_USER_SAVE')) {
+            $force = MW_FORCE_USER_SAVE;
         } elseif ($this->force_save) {
             $force = $this->force_save;
         } elseif (mw_var('force_save_user')) {
             $force = mw_var('force_save_user');
         }
         if (!$force) {
-            if (defined('PS_API_CALL') and mw_is_installed() == true) {
+            if (defined('MW_API_CALL') and mw_is_installed() == true) {
                 if (isset($params['is_admin']) and $this->is_admin() == false and !is_null(User::first())) {
                     unset($params['is_admin']);
                 }
@@ -787,7 +787,7 @@ class UserManager
                     }
                 }
             } else {
-                if (defined('PS_API_CALL') and mw_is_installed() == true) {
+                if (defined('MW_API_CALL') and mw_is_installed() == true) {
                     $adm = $this->is_admin();
                     if ($adm == false) {
                         $params['id'] = $this->id();
@@ -1366,8 +1366,8 @@ class UserManager
             $existing['single'] = true;
             $existing['limit'] = 1;
             $existing = $this->get_all($existing);
-            if (!defined('PS_FORCE_USER_SAVE')) {
-                define('PS_FORCE_USER_SAVE', true);
+            if (!defined('MW_FORCE_USER_SAVE')) {
+                define('MW_FORCE_USER_SAVE', true);
             }
 
 
@@ -1708,7 +1708,7 @@ class UserManager
             $this->socialite->extend('piksera', function ($app) {
                 $config = $app['config']['services.piksera'];
 
-                return $this->socialite->buildProvider(PikseraProvider::class, $config);
+                return $this->socialite->buildProvider(MicroweberProvider::class, $config);
             });
         }
     }

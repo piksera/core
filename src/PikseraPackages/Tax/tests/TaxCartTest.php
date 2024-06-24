@@ -42,7 +42,7 @@ class TaxCartTest extends TestCase
         $checkoutDetails = array();
         $checkoutDetails['email'] = 'test@piksera.com';
         $checkoutDetails['first_name'] = 'Client';
-        $checkoutDetails['last_name'] = 'Piksera';
+        $checkoutDetails['last_name'] = 'Microweber';
 
 
         $checkout = new CheckoutManager();

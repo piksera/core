@@ -45,7 +45,7 @@ if (isset($params['keyword'])) {
     }
 </style>
 <?php $backups = mw('admin\developer_tools\template_exporter\Worker')->get($keyword); ?>
-<div id="backups_list">
+<div id="backumw_list">
     <?php if (!empty($backups) ) { ?>
 
         <h6 class="advanced-settings-p-helper "><?php _e("Available Backups"); ?></h6>

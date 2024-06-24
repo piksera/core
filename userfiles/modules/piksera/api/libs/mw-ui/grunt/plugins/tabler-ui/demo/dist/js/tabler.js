@@ -10465,7 +10465,7 @@
 	    var i, j, k, n, optgroup, optgroups, html, has_create_option, active_group;
 	    var create;
 	    const groups = {};
-	    const groups_order = [];
+	    const groumw_order = [];
 	    var self = this;
 	    var query = self.inputValue();
 	    const same_query = query === self.lastQuery || query == '' && self.lastQuery == null;
@@ -10507,7 +10507,7 @@
 	        let group_fragment = groups[optgroup];
 	        if (group_fragment === undefined) {
 	          group_fragment = document.createDocumentFragment();
-	          groups_order.push(optgroup);
+	          groumw_order.push(optgroup);
 	        }
 	        if (j > 0) {
 	          option_el = option_el.cloneNode(true);
@@ -10528,7 +10528,7 @@
 	      }
 	    }
 	    if (self.settings.lockOptgroupOrder) {
-	      groups_order.sort((a, b) => {
+	      groumw_order.sort((a, b) => {
 	        const grp_a = self.optgroups[a];
 	        const grp_b = self.optgroups[b];
 	        const a_order = grp_a && grp_a.$order || 0;
@@ -10537,7 +10537,7 @@
 	      });
 	    }
 	    html = document.createDocumentFragment();
-	    iterate$1(groups_order, optgroup => {
+	    iterate$1(groumw_order, optgroup => {
 	      let group_fragment = groups[optgroup];
 	      if (!group_fragment || !group_fragment.children.length) return;
 	      let group_heading = self.optgroups[optgroup];

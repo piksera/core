@@ -1,10 +1,10 @@
 <?php
 
-namespace MicroweberPackages\Template\NewWorld\tests\Browser\Components;
+namespace PikseraPackages\Template\NewWorld\tests\Browser\Components;
 
 use Laravel\Dusk\Browser;
 use Laravel\Dusk\Component as BaseComponent;
-use MicroweberPackages\Page\Models\Page;
+use PikseraPackages\Page\Models\Page;
 use Tests\DuskTestCase;
 
 class NewWorldShopProductLinksScraper extends DuskTestCase

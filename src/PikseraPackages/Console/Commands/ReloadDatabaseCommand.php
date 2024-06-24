@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 class ReloadDatabaseCommand extends Command
 {
     protected $name = 'piksera:reload-database';
-    protected $description = 'Reload Piksera Database';
+    protected $description = 'Reload Microweber Database';
 
     public function handle()
     {

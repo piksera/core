@@ -33,7 +33,7 @@ function newsletter_subscribe($params)
     }
 
     $adm = mw()->user_manager->is_admin();
-    if (defined('PS_API_CALL')) {
+    if (defined('MW_API_CALL')) {
         $validate_token = mw()->user_manager->csrf_validate($params);
         if (!$adm) {
             if ($validate_token == false) {

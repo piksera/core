@@ -1,8 +1,8 @@
 <?php
 /**
- * Piksera Helper Functions
+ * Microweber Helper Functions
  *
- * @author      Piksera Team
+ * @author      Microweber Team
  * @author      Peter Ivanov
  * @author      Bozhidar Slaveykov
  *
@@ -10,7 +10,7 @@
  *
  * @link        http://www.piksera.com
  */
-
+ 
 
 if (!function_exists('array_set')) {
     /**

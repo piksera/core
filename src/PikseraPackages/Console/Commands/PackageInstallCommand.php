@@ -10,7 +10,7 @@ use Symfony\Component\Console\Input\InputArgument;
 class PackageInstallCommand extends Command
 {
     protected $name = 'piksera:package-install';
-    protected $description = 'Installs Piksera Package From Marketplace';
+    protected $description = 'Installs Microweber Package From Marketplace';
     protected $installer;
 
     public function __construct()

@@ -8,8 +8,8 @@ function user_ip()
 }
 
 
-//if (!defined('PS_USER_IP')) {
-//    define('PS_USER_IP', user_ip());
+//if (!defined('MW_USER_IP')) {
+//    define('MW_USER_IP', user_ip());
 //}
 
 
@@ -185,7 +185,7 @@ function is_logged()
 {
 
     $is = app()->user_manager->is_logged();
-    if (defined('PS_API_CALL')) {
+    if (defined('MW_API_CALL')) {
         app()->event_manager->trigger('mw.user.is_logged');
     }
 
@@ -326,7 +326,7 @@ function get_users($params = false)
  *
  * @category users
  *
- * @author   Piksera
+ * @author   Microweber
  *
  */
 function get_user($id = false)

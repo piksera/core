@@ -2,7 +2,7 @@
 
     @if ($openLinksInModal)
         @include('content::admin.content.livewire.open-links-in-modal-script')
-    @endif
+    @endif 
 
     @include('content::admin.content.livewire.set-tree-active-content')
     @include('content::admin.content.livewire.card-header')

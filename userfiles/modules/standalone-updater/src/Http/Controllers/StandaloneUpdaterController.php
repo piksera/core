@@ -1,10 +1,10 @@
 <?php
 
-namespace MicroweberPackages\Modules\StandaloneUpdater\Http\Controllers;
+namespace PikseraPackages\Modules\StandaloneUpdater\Http\Controllers;
 
 use GrahamCampbell\Markdown\Facades\Markdown;
 
-class StandaloneUpdaterController extends \MicroweberPackages\Admin\Http\Controllers\AdminController
+class StandaloneUpdaterController extends \PikseraPackages\Admin\Http\Controllers\AdminController
 {
     public function aboutNewVersion()
     {

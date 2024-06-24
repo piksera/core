@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 class OptionCommand extends Command
 {
     protected $name = 'piksera:option';
-    protected $description = 'Set Piksera option';
+    protected $description = 'Set Microweber option';
 
     /**
      * The name and signature of the console command.

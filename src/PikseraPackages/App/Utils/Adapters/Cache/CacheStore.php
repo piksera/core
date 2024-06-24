@@ -4,10 +4,10 @@ namespace PikseraPackages\App\Utils\Adapters\Cache;
 
 use Closure;
 use Illuminate\Contracts\Cache\Repository;
-use Piksera\App\Utils\Adapters\Cache\Storage\ApcStorage;
-use Piksera\App\Utils\Adapters\Cache\Storage\FileStorage;
-use Piksera\App\Utils\Adapters\Cache\Storage\MemcachedStorage;
-use Piksera\App\Utils\Adapters\Cache\Storage\XCacheStorage;
+use Microweber\App\Utils\Adapters\Cache\Storage\ApcStorage;
+use Microweber\App\Utils\Adapters\Cache\Storage\FileStorage;
+use Microweber\App\Utils\Adapters\Cache\Storage\MemcachedStorage;
+use Microweber\App\Utils\Adapters\Cache\Storage\XCacheStorage;
 
 class CacheStore implements Repository
 {

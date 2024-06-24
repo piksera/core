@@ -9,7 +9,7 @@ use PikseraPackages\Import\Loggers\ImportLogger;
 
 /**
  * Run test
- * @author Bobi Piksera
+ * @author Bobi Microweber
  * @command php phpunit.phar --filter Import
  */
 

@@ -1,0 +1,21 @@
+{
+    "name": "piksera-packages/piksera-repository",
+    "description": "Repository container",
+    "version" : "0.0.1",
+    "authors": [
+        {
+            "name": "Piksera",
+            "email": "info@piksera.com"
+        }
+  ],
+  "autoload": {
+      "psr-4": {
+        "PikseraPackages\\Repository\\": ""
+      }
+  },
+  "homepage": "http://piksera.org",
+  "license": "MIT",
+  "support": {
+    "email": "support@piksera.com"
+  }
+}

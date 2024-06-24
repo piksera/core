@@ -1,6 +1,6 @@
 <?php
 namespace Microweber;
 
-class View extends \MicroweberPackages\View\View {
+class View extends \PikseraPackages\View\View {
 
 }

@@ -51,7 +51,7 @@ $video_html = '';
 $video_attr_parent = '';
 if ($video_url) {
     $video_html = '<video src="' . $video_url . '" autoplay muted loop playsinline></video>';
-    $video_attr_parent = ' data-mwvideo="' . $video_url . '" ';
+    $video_attr_parent = ' data-psvideo="' . $video_url . '" ';
 }
 if ($style_attributes) {
     $style_attr_items = implode('; ', $style_attributes);

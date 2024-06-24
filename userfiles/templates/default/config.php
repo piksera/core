@@ -2,7 +2,7 @@
 
 $config = array();
 $config['name'] = "Basic Theme";
-$config['author'] = "Microweber";
+$config['author'] = "Piksera";
 $config['version'] = 0.1;
 $config['is_hidden_from_install_screen'] = true;
 $config['standalone_module_skins'] = true;

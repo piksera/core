@@ -12,7 +12,7 @@ use PikseraPackages\App\Http\Middleware\AllowedIps;
 use PikseraPackages\Install\Http\Controllers\InstallController;
 use PikseraPackages\User\Models\User;
 use PikseraPackages\View\StringBlade;
-use PikseraPackages\View\View as PikseraView;
+use PikseraPackages\View\View as MicroweberView;
 use Illuminate\Support\Facades\View as LaravelView;
 
 class AdminController extends Controller
@@ -77,7 +77,7 @@ class AdminController extends Controller
         $website_name = get_option('website_name', 'website');
         $hostname = site_hostname();
         if (!$website_name) {
-            $website_name = 'Piksera';
+            $website_name = 'Microweber';
         }
         $favicon_image = get_favicon_image();
         if (!$favicon_image) {
@@ -138,7 +138,7 @@ class AdminController extends Controller
 
             return $installer->index();
 
-        } elseif (defined('PS_V')) {
+        } elseif (defined('MW_VERSION')) {
             $this->app->update->perform_post_update_if_needed();
         }
 
@@ -152,8 +152,8 @@ class AdminController extends Controller
         }
 
 
-        if (!defined('PS_BACKEND')) {
-            define('PS_BACKEND', true);
+        if (!defined('MW_BACKEND')) {
+            define('MW_BACKEND', true);
         }
 
 
@@ -177,7 +177,7 @@ class AdminController extends Controller
 
         //   $view .= (!$hasNoAdmin ? 'create' : 'index') . '.php';
         $view .= (!$hasNoAdmin ? 'create_main' : 'index_main') . '.php';
-        $layout = new PikseraView($view);
+        $layout = new MicroweberView($view);
 
         if ($this->render_content) {
             $layout->assign('render_content', $this->render_content);

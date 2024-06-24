@@ -20,7 +20,7 @@ if (isset($_GET['preview_layout'])) {
                     <div class="col-12 col-lg-12 col-lg-5 mx-auto text-center text-lg-start m-b-40 allow-drop">
                         <module type="menu" template="simple" id="footer_menu" name="footer_menu"/>
                         <br/>
-                        <p><?php _lang('Microweber is free open source drag and drop website builder and CMS. It is under MIT license and we use Laravel PHP framework', 'templates/new-world'); ?></p>
+                        <p><?php _lang('Piksera is free open source drag and drop website builder and CMS. It is under MIT license and we use Laravel PHP framework', 'templates/new-world'); ?></p>
                     </div>
 
                     <div class="col-12 col-sm col-lg-6 col-lg mx-auto text-white allow-drop">

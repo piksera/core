@@ -11,7 +11,7 @@ description: Clean
         $('.js-switch-language-dropdown').on('change', function () {
 
             var selected = $(this).val();
-            var is_admin = <?php if (defined('PS_FRONTEND')) { echo 0; } else { echo 1; } ?>;
+            var is_admin = <?php if (defined('MW_FRONTEND')) { echo 0; } else { echo 1; } ?>;
 
             $.post(mw.settings.api_url + "multilanguage/change_language", { locale: selected, is_admin: is_admin })
                 .done(function(data) {

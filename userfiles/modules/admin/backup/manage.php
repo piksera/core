@@ -6,7 +6,7 @@
 
 <h3 class="font-weight-bold mb-3 mt-2"><?php _e('Available backups'); ?></h3>
 
-<div id="backups_list">
+<div id="backumw_list">
     <?php
     $backups = app(\PikseraPackages\Backup\Http\Controllers\Admin\BackupController::class)->get();
     ?>

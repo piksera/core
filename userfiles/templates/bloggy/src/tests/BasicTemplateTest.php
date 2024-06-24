@@ -1,11 +1,11 @@
 <?php
-namespace MicroweberPackages\Template\NewWorld\tests;
+namespace PikseraPackages\Template\NewWorld\tests;
 
 use Illuminate\Support\Facades\Auth;
-use MicroweberPackages\App\Http\Controllers\FrontendController;
-use MicroweberPackages\Core\tests\TestCase;
-use MicroweberPackages\Page\Models\Page;
-use MicroweberPackages\User\Models\User;
+use PikseraPackages\App\Http\Controllers\FrontendController;
+use PikseraPackages\Core\tests\TestCase;
+use PikseraPackages\Page\Models\Page;
+use PikseraPackages\User\Models\User;
 
 class BasicTemplateTest extends TestCase
 {

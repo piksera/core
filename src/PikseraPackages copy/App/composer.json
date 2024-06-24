@@ -1,0 +1,39 @@
+{
+  "name": "microweber-packages/microweber-app",
+  "description": "Piksera App.",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Piksera",
+      "email": "info@piksera.com"
+    },
+    {
+      "name": "Bozhidar Slaveykov",
+      "email": "bobi@piksera.com"
+    }
+  ],
+
+  "require-dev": {
+
+  },
+  "autoload": {
+    "psr-4": {
+      "PikseraPackages\\App\\": "src/"
+    },
+    "files": [
+      "functions/api.php",
+      "functions/laravel.php",
+      "functions/common.php"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "homepage": "http://piksera.com",
+  "license": "MIT",
+  "support": {
+    "email": "support@piksera.com"
+  }
+}

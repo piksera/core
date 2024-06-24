@@ -7,7 +7,7 @@
     <a href="<?php print $here; ?>samples/sample.xlsx" class="mw-ui-link">xls</a>,
     <a href="<?php print $here; ?>samples/other_cms.zip" class="mw-ui-link"><?php _e('other files'); ?></a>.
 </p>
-<div id="backups_list" >
+<div id="backumw_list" >
 
     <div class="alert alert-danger">This module is depricated.</div>
 

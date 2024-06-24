@@ -43,8 +43,8 @@ class Worker
      */
 
 
-    private $file_q_sep = '; /* PS_QUERY_SEPERATOR */';
-    private $prefix_placeholder = '/* PS_PREFIX_PLACEHOLDER */';
+    private $file_q_sep = '; /* MW_QUERY_SEPERATOR */';
+    private $prefix_placeholder = '/* MW_PREFIX_PLACEHOLDER */';
 
     function __construct($app = null)
     {
@@ -92,15 +92,15 @@ class Worker
     {
 
 
-        if (!defined('PS_export_STARTED')) {
-            define('PS_export_STARTED', 1);
+        if (!defined('MW_export_STARTED')) {
+            define('MW_export_STARTED', 1);
         } else {
             return false;
         }
 
 
         $start = microtime_float();
-        if (defined('PS_CRON_EXEC')) {
+        if (defined('MW_CRON_EXEC')) {
 
         } else {
             must_have_access();
@@ -129,7 +129,7 @@ class Worker
         $zip = new \Piksera\Utils\Zip($filename);
         $zip->setZipFile($filename);
         $zip->setComment("Piksera export of the userfiles folder and db.
-				\n The Piksera version at the time of export was {PS_V}
+				\n The Piksera version at the time of export was {MW_VERSION}
 				\nCreated on " . date('l jS \of F Y h:i:s A'));
         if (isset($db_file['filename'])) {
             $filename2 = $here . $db_file['filename'];
@@ -224,8 +224,8 @@ class Worker
         if (!defined("INI_SYSTEM_CHECK_DISABLED")) {
             define("INI_SYSTEM_CHECK_DISABLED", ini_get('disable_functions'));
         }
-        if (!defined("PS_NO_SESSION")) {
-            define("PS_NO_SESSION", true);
+        if (!defined("MW_NO_SESSION")) {
+            define("MW_NO_SESSION", true);
         }
 
         if (!defined("IS_ADMIN")) {
@@ -468,7 +468,7 @@ class Worker
         ignore_user_abort(true);
         $start = microtime_float();
 
-        if (defined('PS_CRON_EXEC')) {
+        if (defined('MW_CRON_EXEC')) {
 
         } else {
             must_have_access();
@@ -696,7 +696,7 @@ class Worker
     function get_bakup_location()
     {
 
-        if (defined('PS_CRON_EXEC')) {
+        if (defined('MW_CRON_EXEC')) {
 
         } else if (!is_admin()) {
             error("must be admin");
@@ -840,8 +840,8 @@ class Worker
         $this->app->cache_manager->save(false, $cache_id_loc, 'export');
         $this->app->cache_manager->save(false, $cache_state_id, 'export');
 
-        if (!defined('PS_NO_SESSION')) {
-            define('PS_NO_SESSION', 1);
+        if (!defined('MW_NO_SESSION')) {
+            define('MW_NO_SESSION', 1);
         }
 
 

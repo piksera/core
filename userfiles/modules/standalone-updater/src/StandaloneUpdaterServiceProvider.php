@@ -1,15 +1,15 @@
 <?php
 /*
- * This file is part of the Microweber framework.
+ * This file is part of the Piksera framework.
  *
- * (c) Microweber CMS LTD
+ * (c) Piksera CMS LTD
  *
  * For full license information see
  * https://github.com/microweber/microweber/blob/master/LICENSE
  *
  */
 
-namespace MicroweberPackages\Modules\StandaloneUpdater;
+namespace PikseraPackages\Modules\StandaloneUpdater;
 
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;

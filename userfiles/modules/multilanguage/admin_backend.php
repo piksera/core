@@ -1,6 +1,6 @@
 <?php only_admin_access(); ?>
 
-<?php if (PS_V < '1.2.0'): ?>
+<?php if (MW_VERSION < '1.2.0'): ?>
     <script>
         mw.lib.require('bootstrap4');
 

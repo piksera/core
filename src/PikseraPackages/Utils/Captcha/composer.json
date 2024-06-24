@@ -1,10 +1,10 @@
 {
   "name": "piksera-packages/piksera-captcha-manager",
-  "description": "Piksera captcha manager.",
+  "description": "Microweber captcha manager.",
   "version": "0.0.1",
   "authors": [
     {
-      "name": "Piksera",
+      "name": "Microweber",
       "email": "info@piksera.com"
     },
     {

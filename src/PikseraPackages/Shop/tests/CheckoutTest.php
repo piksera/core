@@ -7,7 +7,7 @@ use PikseraPackages\Core\tests\TestCase;
 
 /**
  * Run test
- * @author Bobi Piksera
+ * @author Bobi Microweber
  * @command php phpunit.phar --filter CheckoutTest
  */
 class CheckoutTest extends TestCase
@@ -39,7 +39,7 @@ class CheckoutTest extends TestCase
         $checkoutDetails = array();
         $checkoutDetails['email'] = 'client@piksera.com';
         $checkoutDetails['first_name'] = 'Client';
-        $checkoutDetails['last_name'] = 'Piksera';
+        $checkoutDetails['last_name'] = 'Microweber';
         $checkoutDetails['phone'] = '08812345678';
         $checkoutDetails['address'] = 'Business Park, Mladost 4';
         $checkoutDetails['city'] = 'Sofia';
@@ -159,7 +159,7 @@ class CheckoutTest extends TestCase
         $checkoutDetails = array();
         $checkoutDetails['email'] = 'client@piksera.com';
         $checkoutDetails['first_name'] = 'Client';
-        $checkoutDetails['last_name'] = 'Piksera';
+        $checkoutDetails['last_name'] = 'Microweber';
         $checkoutDetails['phone'] = '08812345678';
         $checkoutDetails['address'] = 'Business Park, Mladost 4';
         $checkoutDetails['city'] = 'Sofia';

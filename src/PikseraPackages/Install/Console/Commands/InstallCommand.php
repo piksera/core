@@ -11,7 +11,7 @@ use Symfony\Component\Console\Input\InputArgument;
 class InstallCommand extends Command
 {
     protected $name = 'piksera:install';
-    protected $description = 'Installs Piksera (duh)';
+    protected $description = 'Installs Microweber (duh)';
     protected $installer;
 
     /**
@@ -151,7 +151,7 @@ class InstallCommand extends Command
 
         $input['default_template'] = $templateFound;
 
-        $this->info('Installing Piksera...');
+        $this->info('Installing Microweber...');
         $this->installer->command_line_logger = $this;
         $result = $this->installer->index($input);
 

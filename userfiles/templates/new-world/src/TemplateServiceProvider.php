@@ -1,7 +1,7 @@
 <?php
 
 
-namespace MicroweberPackages\Template\NewWorld;
+namespace PikseraPackages\Template\NewWorld;
 
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;

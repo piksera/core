@@ -1,10 +1,10 @@
 {
   "name": "piksera-packages/piksera-user-manager",
-  "description": "Piksera user manager.",
+  "description": "Microweber user manager.",
   "version": "0.0.1",
   "authors": [
     {
-      "name": "Piksera",
+      "name": "Microweber",
       "email": "info@piksera.com"
     },
     {

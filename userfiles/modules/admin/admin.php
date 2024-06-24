@@ -1,8 +1,8 @@
 <?php
-if (!defined('PS_ADMIN_VIEWS_DIR')) {
+if (!defined('MW_ADMIN_VIEWS_DIR')) {
     return false;
 }
-include(PS_ADMIN_VIEWS_DIR . 'header.php'); ?>
+include(MW_ADMIN_VIEWS_DIR . 'header.php'); ?>
 
 <?php if (is_logged() == false): ?>
     <module type="users/login" template="admin"/>
@@ -26,7 +26,7 @@ include(PS_ADMIN_VIEWS_DIR . 'header.php'); ?>
             $v_mod = module_name_decode($v1);
 
             if (is_module($v_mod)) {
-                //include_once (PS_ADMIN_VIEWS_DIR . 'module_nav.php');
+                //include_once (MW_ADMIN_VIEWS_DIR . 'module_nav.php');
                 //  $mod = load_module($v_mod, $attrs=array('view' => 'admin','backend' => 'true'));
 
                 $mod = '<module type="' . $v_mod . '" view="admin"  backend="true" id="mw-main-module-backend" />';
@@ -37,10 +37,10 @@ include(PS_ADMIN_VIEWS_DIR . 'header.php'); ?>
             }
             ?>
         <?php else : ?>
-            <?php //include_once (PS_ADMIN_VIEWS_DIR . 'header_nav.php'); ?>
+            <?php //include_once (MW_ADMIN_VIEWS_DIR . 'header_nav.php'); ?>
 
             <?php
-            $vf = PS_ADMIN_VIEWS_DIR . $v . '.php';
+            $vf = MW_ADMIN_VIEWS_DIR . $v . '.php';
             $vf = sanitize_path($vf);
 
             if (is_file($vf)) {
@@ -57,7 +57,7 @@ include(PS_ADMIN_VIEWS_DIR . 'header.php'); ?>
 
                     print $mod;
                 } else {
-                    include(PS_ADMIN_VIEWS_DIR . 'index.php');
+                    include(MW_ADMIN_VIEWS_DIR . 'index.php');
                 }
             }
             ?>
@@ -67,4 +67,4 @@ include(PS_ADMIN_VIEWS_DIR . 'header.php'); ?>
     </main>
 <?php endif; ?>
 
-<?php include(PS_ADMIN_VIEWS_DIR . 'footer.php'); ?>
+<?php include(MW_ADMIN_VIEWS_DIR . 'footer.php'); ?>

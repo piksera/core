@@ -5947,12 +5947,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lcobucci/jwt.git",
-                "reference": "0e8a0c9183a37fccd8d3526673a6f061add28c73"
+                "reference": "871f751483551452fa4caaa14b01b15702d8752a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/0e8a0c9183a37fccd8d3526673a6f061add28c73",
-                "reference": "0e8a0c9183a37fccd8d3526673a6f061add28c73",
+                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/871f751483551452fa4caaa14b01b15702d8752a",
+                "reference": "871f751483551452fa4caaa14b01b15702d8752a",
                 "shasum": ""
             },
             "require": {
@@ -5976,7 +5976,7 @@
             "suggest": {
                 "lcobucci/clock": ">= 3.2"
             },
-            "time": "2024-06-21T10:56:55+00:00",
+            "time": "2024-06-24T03:10:36+00:00",
             "default-branch": true,
             "type": "library",
             "installation-source": "dist",
@@ -7973,7 +7973,7 @@
             "installation-source": "dist",
             "autoload": {
                 "psr-4": {
-                    "MicroweberPackages\\": "src/"
+                    "PikseraPackages\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -8063,7 +8063,7 @@
                 "type": "zip",
                 "url": "https://packages.microweberapi.com/dist/microweber-templates/big-free/microweber-templates-big-free-15.4-befc42.zip",
                 "reference": "864db24c5c9ee4b7a7211a99284995b966c36487",
-                "shasum": "a5fc0a1a5b0f40d6691de1be65ba50d690283bf8"
+                "shasum": "6ca68a12e9511797d949b51f1811b443af16a11c"
             },
             "time": "2024-04-04T08:11:26+00:00",
             "type": "microweber-template",
@@ -8378,7 +8378,7 @@
                     "whmcs_url": "https://members.microweber.com"
                 }
             },
-            "installation-source": "dist",
+            "installation-source": "source",
             "notification-url": "http://packages.microweberapi.com/packages/download-notify",
             "license": [
                 "MIT"
@@ -11696,12 +11696,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "4c4695efa144a5ec93d887f7146627dc5e74a82c"
+                "reference": "f2b984c41ecfeca01e2534eb099d5897b0400fe2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/4c4695efa144a5ec93d887f7146627dc5e74a82c",
-                "reference": "4c4695efa144a5ec93d887f7146627dc5e74a82c",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f2b984c41ecfeca01e2534eb099d5897b0400fe2",
+                "reference": "f2b984c41ecfeca01e2534eb099d5897b0400fe2",
                 "shasum": ""
             },
             "require": {
@@ -11710,7 +11710,7 @@
             "conflict": {
                 "phpstan/phpstan-shim": "*"
             },
-            "time": "2024-06-24T07:59:03+00:00",
+            "time": "2024-06-24T10:12:03+00:00",
             "default-branch": true,
             "bin": [
                 "phpstan",

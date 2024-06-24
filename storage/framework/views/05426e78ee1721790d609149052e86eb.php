@@ -44,4 +44,4 @@ echo $html;
 
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('admin::layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/yahyehassan/Documents/Core/src/MicroweberPackages/Page/resources/views/admin/page/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('admin::layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/yahyehassan/Documents/Core/src/PikseraPackages/Page/resources/views/admin/page/index.blade.php ENDPATH**/ ?>

@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Artisan;
 use Cache;
 use PikseraPackages\ComposerClient\Client;
-use PikseraPackages\Package\PikseraComposerClient;
-use PikseraPackages\Package\PikseraComposerPackage;
+use PikseraPackages\Package\MicroweberComposerClient;
+use PikseraPackages\Package\MicroweberComposerPackage;
 use PikseraPackages\Page\Models\Page;
 use PikseraPackages\Translation\TranslationPackageInstallHelper;
 use PikseraPackages\User\Models\User;
@@ -44,7 +44,7 @@ class InstallController extends Controller
         $params = [];
         $params['require_name'] = $packageName;
 
-        $runner = new PikseraComposerClient();
+        $runner = new MicroweberComposerClient();
 
         $license = new License();
         $getLicenses = $license->getLicenses();
@@ -83,7 +83,7 @@ class InstallController extends Controller
             return;
         }
 
-        $template = PikseraComposerPackage::format($getPackage);
+        $template = MicroweberComposerPackage::format($getPackage);
 
         return view('install::install_template_modal', ['template'=>$template]);
     }
@@ -97,8 +97,8 @@ class InstallController extends Controller
 
     public function index($input = null)
     {
-        if (!defined('PS_INSTALL_CONTROLLER')) {
-            define('PS_INSTALL_CONTROLLER', true);
+        if (!defined('MW_INSTALL_CONTROLLER')) {
+            define('MW_INSTALL_CONTROLLER', true);
         }
 
         if (!is_array($input) || empty($input)) {
@@ -107,7 +107,7 @@ class InstallController extends Controller
 
         $is_installed = mw_is_installed();
         if ($is_installed) {
-            return 'Piksera is already installed!';
+            return 'Microweber is already installed!';
         }
 
         if (isset($input['save_license'])) {
@@ -243,8 +243,8 @@ class InstallController extends Controller
             Config::set("database.connections.$dbDriver.database", $input['db_name']);
             Config::set("database.connections.$dbDriver.prefix", $input['db_prefix']);
 
-            if (defined('PS_V')) {
-                Config::set('piksera.version', PS_V);
+            if (defined('MW_VERSION')) {
+                Config::set('piksera.version', MW_VERSION);
             }
 
             if (isset($input['default_template']) and $input['default_template'] != false) {
@@ -564,7 +564,7 @@ class InstallController extends Controller
 
         $is_installed = mw_is_installed();
         if ($is_installed) {
-            App::abort(403, 'Unauthorized action. Piksera is already installed.');
+            App::abort(403, 'Unauthorized action. Microweber is already installed.');
         }
 
         $layout->assign('done', $is_installed);
@@ -576,7 +576,7 @@ class InstallController extends Controller
 
     private function reportInstall($email, $sendMail = false)
     {
-        if (defined('PS_UNIT_TEST')) {
+        if (defined('MW_UNIT_TEST')) {
             return;
         }
 
@@ -657,9 +657,9 @@ class InstallController extends Controller
                     continue;
                 }/*
                 if (isset($latestVersion['dist']['type']) && $latestVersion['dist']['type'] == 'zip') {
-                    $ready[] = PikseraComposerPackage::format($latestVersion);
+                    $ready[] = MicroweberComposerPackage::format($latestVersion);
                 }*/
-                $ready[] = PikseraComposerPackage::format($latestVersion);
+                $ready[] = MicroweberComposerPackage::format($latestVersion);
 
             }
         }
@@ -669,7 +669,7 @@ class InstallController extends Controller
 
     private function _install_package_by_name($package_name)
     {
-        $runner = new PikseraComposerClient();
+        $runner = new MicroweberComposerClient();
         $results = $runner->requestInstall(['require_name' => $package_name]);
         $runner->requestInstall($results['form_data_module_params']);
 

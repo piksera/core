@@ -7,7 +7,7 @@ use Butschster\Head\Facades\Meta;
 use Illuminate\Support\Str;
 use PikseraPackages\App\Http\Controllers\JsCompileController;
 use PikseraPackages\Template\Adapters\AdminTemplateStyle;
-use PikseraPackages\Template\Adapters\PikseraTemplate;
+use PikseraPackages\Template\Adapters\MicroweberTemplate;
 use PikseraPackages\Template\Adapters\RenderHelpers\TemplateOptimizeLoadingHelper;
 use PikseraPackages\Template\Adapters\TemplateCssParser;
 use PikseraPackages\Template\Adapters\TemplateCustomCss;
@@ -20,12 +20,12 @@ use PikseraPackages\Template\Adapters\TemplateStackRenderer;
  * @category Template
  * @desc    These functions will allow to wo work with piksera template files.
  *
- * @property \PikseraPackages\Template\Adapters\PikseraTemplate $templateAdapter
+ * @property \PikseraPackages\Template\Adapters\MicroweberTemplate $templateAdapter
  */
 class Template
 {
     /**
-     * An instance of the Piksera Application class.
+     * An instance of the Microweber Application class.
      *
      * @var
      */
@@ -40,7 +40,7 @@ class Template
 
     /**
      *
-     * @var  $templateAdapter PikseraTemplate
+     * @var  $templateAdapter MicroweberTemplate
      */
     public $templateAdapter = null;
 
@@ -82,7 +82,7 @@ class Template
         $this->admin = new AdminTemplateStyle($app);
         $this->admin = new AdminTemplateStyle($app);
 
-        $this->setTemplateAdapter(new PikseraTemplate());
+        $this->setTemplateAdapter(new MicroweberTemplate());
         $this->setFontsAdapter(new TemplateFonts());
         $this->setCustomCssAdapter(new TemplateCustomCss());
     }
@@ -464,7 +464,7 @@ class Template
         $compile_assets = \Config::get('piksera.compile_assets');
         $userfiles_dir = userfiles_path();
         $userfiles_cache_dir = normalize_path($userfiles_dir . 'cache' . DS);
-        $userfiles_cache_filename = $userfiles_cache_dir . 'custom_css.' . crc32(site_url()) . '.' . PS_V . '.css';
+        $userfiles_cache_filename = $userfiles_cache_dir . 'custom_css.' . crc32(site_url()) . '.' . MW_VERSION . '.css';
         if (!is_dir($userfiles_cache_dir)) {
             return;
         }
@@ -743,7 +743,7 @@ class Template
      *
      * @return array
      *
-     * @author    Piksera Dev Team
+     * @author    Microweber Dev Team
      *
      * @since     Version 1.0
      */

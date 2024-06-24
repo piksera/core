@@ -11,7 +11,7 @@
 
 
                * template - Name of the template.
-                 Templates provided from Microweber:
+                 Templates provided from Piksera:
                    - default - loads when no template is specified
                    - 3 columns
                    - 4 columns

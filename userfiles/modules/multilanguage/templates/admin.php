@@ -82,7 +82,7 @@ description: MW Default
         onChange: function(val){
             var value = val[0];
             if(value) {
-                $.post(mw.settings.api_url + "multilanguage/change_language", {locale: value, is_admin: <?php echo defined('PS_FRONTEND') ? 0 : 1;  ?> })
+                $.post(mw.settings.api_url + "multilanguage/change_language", {locale: value, is_admin: <?php echo defined('MW_FRONTEND') ? 0 : 1;  ?> })
                     .done(function (data) {
                         if (data.refresh) {
                             if (data.location) {

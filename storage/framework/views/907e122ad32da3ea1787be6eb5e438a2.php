@@ -12,7 +12,7 @@
 
 
     <link rel="stylesheet" href="<?php print mw_includes_url(); ?>css/fonts/fonts.css">
-    <?php //print \MicroweberPackages\Admin\Facades\AdminManager::headTags();    ?>
+    <?php //print \PikseraPackages\Admin\Facades\AdminManager::headTags();    ?>
     <?php print mw_admin_header_scripts() ;    ?>
 
     <script type="text/javascript">
@@ -80,7 +80,7 @@
 
 
     <?php } ?>
-    <?php echo app('Illuminate\Foundation\Vite')('src/MicroweberPackages/LiveEdit/resources/js/ui/admin-app.js'); ?>
+    <?php echo app('Illuminate\Foundation\Vite')('src/PikseraPackages/LiveEdit/resources/js/ui/admin-app.js'); ?>
 
 
 
@@ -353,4 +353,4 @@ $user = get_user_by_id($user_id);
     <?php } ?>
 
 <?php event_trigger('mw.admin.header.last'); ?>
-<?php /**PATH /Users/yahyehassan/Documents/Core/src/MicroweberPackages/Admin/Providers/../resources/views/layouts/partials/header.blade.php ENDPATH**/ ?>
+<?php /**PATH /Users/yahyehassan/Documents/Core/src/PikseraPackages/Admin/Providers/../resources/views/layouts/partials/header.blade.php ENDPATH**/ ?>

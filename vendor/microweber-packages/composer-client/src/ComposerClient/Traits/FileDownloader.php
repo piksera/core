@@ -1,6 +1,6 @@
 <?php
 
-namespace MicroweberPackages\ComposerClient\Traits;
+namespace PikseraPackages\ComposerClient\Traits;
 
 trait FileDownloader
 {

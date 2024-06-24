@@ -61,7 +61,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => \MicroweberPackages\User\Models\User::class,
+            'model' => \PikseraPackages\User\Models\User::class,
         ],
         // 'users' => [
         //     'driver' => 'database',
