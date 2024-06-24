@@ -13,7 +13,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packages.microweberapi.com/packages.json"
+            "url": "https://packages.piksera.com/package.json"
         }
     ],
     "require": {

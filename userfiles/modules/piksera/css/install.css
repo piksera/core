@@ -1,7 +1,14 @@
 .installholder{
-  width: 530px;
+  width: 50%;
   margin: 50px auto;
   max-width: 100%;
+}
+
+.card{
+
+  border-radius: 0% !important;
+  border: 0 !important;
+
 }
 
 #install-row .mw-ui-field{
@@ -9,8 +16,23 @@
 }
 
 body{
-  background: #f5f5f5;
+  background: #e4dcdc !important;
+  font-family: sans-serif;
+  font-size: 20px;
 }
+
+.text-mute{
+
+  color: #747579;
+}
+
+
+
+.text-center {
+  display: flex;
+  justify-content: center;
+}
+
 
 #mw_db_setup_toggle{
   padding-inline-end: 15px;

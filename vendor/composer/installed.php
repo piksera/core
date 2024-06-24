@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'microweber/microweber',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'name' => 'piksera/core',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '2a5138b88c899fe6a215f0af813d262e09413569',
         'type' => 'application',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -1288,15 +1288,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'microweber/microweber' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
-            'type' => 'application',
-            'install_path' => __DIR__ . '/../../',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'mobiledetect/mobiledetectlib' => array(
             'pretty_version' => '2.8.x-dev',
             'version' => '2.8.9999999.9999999-dev',
@@ -1733,7 +1724,7 @@
         'phpseclib/phpseclib' => array(
             'pretty_version' => '3.0.x-dev',
             'version' => '3.0.9999999.9999999-dev',
-            'reference' => 'cde532435e325e39f790043967af4b2fe0e93158',
+            'reference' => '211ebc399c6e73c225a018435fe5ae209d1d1485',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpseclib/phpseclib',
             'aliases' => array(),
@@ -1751,7 +1742,7 @@
         'phpstan/phpstan' => array(
             'pretty_version' => '1.11.x-dev',
             'version' => '1.11.9999999.9999999-dev',
-            'reference' => '0037f9eb2ac22c4026e6e674d51cc9bd9f35c037',
+            'reference' => '4c4695efa144a5ec93d887f7146627dc5e74a82c',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpstan/phpstan',
             'aliases' => array(),
@@ -1810,6 +1801,15 @@
             'install_path' => __DIR__ . '/../phpunit/phpunit',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'piksera/core' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '2a5138b88c899fe6a215f0af813d262e09413569',
+            'type' => 'application',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'pimple/pimple' => array(
             'pretty_version' => 'v3.5.0',
@@ -2098,7 +2098,7 @@
         'sabberworm/php-css-parser' => array(
             'pretty_version' => 'v8.x-dev',
             'version' => '8.9999999.9999999.9999999-dev',
-            'reference' => 'b48925e53777c5a97c2273aaf88bb7ebacb46b67',
+            'reference' => '7d413c8f2c50ac9275b4a85e780b75494b2beca0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../sabberworm/php-css-parser',
             'aliases' => array(),

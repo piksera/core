@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "656dbf8c44aee87b7e4fe6af395b9fdb",
+    "content-hash": "72ab32f5d0c3243295f719480d5d1377",
     "packages": [
         {
             "name": "akaunting/laravel-money",
@@ -10078,12 +10078,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "cde532435e325e39f790043967af4b2fe0e93158"
+                "reference": "211ebc399c6e73c225a018435fe5ae209d1d1485"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/cde532435e325e39f790043967af4b2fe0e93158",
-                "reference": "cde532435e325e39f790043967af4b2fe0e93158",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/211ebc399c6e73c225a018435fe5ae209d1d1485",
+                "reference": "211ebc399c6e73c225a018435fe5ae209d1d1485",
                 "shasum": ""
             },
             "require": {
@@ -10180,7 +10180,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-22T18:41:35+00:00"
+            "time": "2024-06-24T06:27:33+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",
@@ -11377,12 +11377,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MyIntervals/PHP-CSS-Parser.git",
-                "reference": "b48925e53777c5a97c2273aaf88bb7ebacb46b67"
+                "reference": "7d413c8f2c50ac9275b4a85e780b75494b2beca0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MyIntervals/PHP-CSS-Parser/zipball/b48925e53777c5a97c2273aaf88bb7ebacb46b67",
-                "reference": "b48925e53777c5a97c2273aaf88bb7ebacb46b67",
+                "url": "https://api.github.com/repos/MyIntervals/PHP-CSS-Parser/zipball/7d413c8f2c50ac9275b4a85e780b75494b2beca0",
+                "reference": "7d413c8f2c50ac9275b4a85e780b75494b2beca0",
                 "shasum": ""
             },
             "require": {
@@ -11434,7 +11434,7 @@
                 "issues": "https://github.com/MyIntervals/PHP-CSS-Parser/issues",
                 "source": "https://github.com/MyIntervals/PHP-CSS-Parser/tree/v8.x"
             },
-            "time": "2024-02-24T19:34:59+00:00"
+            "time": "2024-06-23T22:39:00+00:00"
         },
         {
             "name": "scssphp/scssphp",
@@ -17317,12 +17317,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "0037f9eb2ac22c4026e6e674d51cc9bd9f35c037"
+                "reference": "4c4695efa144a5ec93d887f7146627dc5e74a82c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/0037f9eb2ac22c4026e6e674d51cc9bd9f35c037",
-                "reference": "0037f9eb2ac22c4026e6e674d51cc9bd9f35c037",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/4c4695efa144a5ec93d887f7146627dc5e74a82c",
+                "reference": "4c4695efa144a5ec93d887f7146627dc5e74a82c",
                 "shasum": ""
             },
             "require": {
@@ -17368,7 +17368,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-06-22T05:33:47+00:00"
+            "time": "2024-06-24T07:59:03+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",

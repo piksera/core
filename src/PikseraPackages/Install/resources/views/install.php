@@ -21,6 +21,120 @@
     <link type="text/css" rel="stylesheet" media="all" href="<?php print mw_includes_url(); ?>api/libs/mw-ui/assets/ui/plugins/css/plugins.min.css"/>
     <link type="text/css" rel="stylesheet" media="all" href="<?php print mw_includes_url(); ?>api/libs/mw-ui/grunt/plugins/ui/css/main.css"/>
 
+
+
+    <style>
+    * {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue),90%,95%);
+	--fg: hsl(var(--hue),90%,5%);
+	--trans-dur: 0.3s;
+ }
+body {
+	background-color: #e4dcdc;
+	color: var(--fg);
+ 	height: 100vh;
+	display: grid;
+	place-items: center;
+	transition: background-color var(--trans-dur);
+}
+main {
+	padding: 1.5em 0;
+}
+.ip {
+	width: 16em;
+	height: 8em;
+}
+.ip__track {
+	stroke: hsl(var(--hue),90%,90%);
+	transition: stroke var(--trans-dur);
+}
+.ip__worm1,
+.ip__worm2 {
+	animation: worm1 2s linear infinite;
+}
+.ip__worm2 {
+	animation-name: worm2;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue),90%,5%);
+		--fg: hsl(var(--hue),90%,95%);
+	}
+	.ip__track {
+		stroke: hsl(var(--hue),90%,15%);
+	}
+}
+
+/* Animation */
+@keyframes worm1 {
+	from {
+		stroke-dashoffset: 0;
+	}
+	50% {
+		animation-timing-function: steps(1);
+		stroke-dashoffset: -358;
+	}
+	50.01% {
+		animation-timing-function: linear;
+		stroke-dashoffset: 358;
+	}
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes worm2 {
+	from {
+		stroke-dashoffset: 358;
+	}
+	50% {
+		stroke-dashoffset: 0;
+	}
+	to {
+		stroke-dashoffset: -358;
+	}
+}
+</style>
+
+ <script>
+    $(document).ready(function() {
+        $('#submitBtn').click(function() {
+            $(this).prop('disabled', true); // Disable button to prevent multiple submissions
+            $('#loading').removeClass('d-none'); // Show loading animation
+            // Perform AJAX request to submit data
+            $.ajax({
+                url: '/your-route', // Replace with your route
+                type: 'POST',
+                data: {
+                    // Your data to be submitted
+                },
+                success: function(response) {
+                    // Handle successful response, if needed
+                    console.log(response);
+                    // Redirect or perform any other action
+                },
+                error: function(xhr, status, error) {
+                    // Handle error, if needed
+                    console.error(xhr.responseText);
+                    // Enable the button and hide loading animation
+                    $('#submitBtn').prop('disabled', false);
+                    $('#loading').addClass('d-none');
+                }
+            });
+        });
+    });
+</script>
+
+
+
     <?php
     $rand = uniqid();
     $ua = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
@@ -334,9 +448,9 @@
 </head>
 <body>
 
-<div class="installholder">
+<div class="installholder row justify-content-center mt-5">
  
-    <div class="card mb-4">
+    <div class="card mb-4 shadow rounded-0">
         <div class="card-header d-block">
             <div class="text-center my-3">
                 <?php if ($pre_configured): ?>
@@ -495,7 +609,7 @@
                                 $dbDefaultUsername = '';
                                 $dbDefaultPassword = '';
                                 $dbDefaultHostname = '';
-                                $dbDefaultEngine = 'sqlite';
+                                $dbDefaultEngine = 'mysql';
                                 $dbDefaultLang = 'en_US';
 
 
@@ -566,22 +680,23 @@
 
                                             <?php endif; ?>
 
-                                            <div id="mw_db_setup_toggle" <?php if ($hide_db_setup == true): ?> style="display:none;" <?php endif; ?>>
-                                                <?php if (!$hide_db_setup): ?>
-                                                    <h4><?php _e('Database Server'); ?></h4>
-                                                <?php else: ?>
+                                            <?php if (!$hide_db_setup): ?>
+
+                                            <div class="text-mute mb-3" style="font-size:20px; font-weight:800;"  id="mw_db_setup_toggle" <?php if ($hide_db_setup == true): ?> style="display:none;" <?php endif; ?>>Piksera Installation| <?php _e('Database Server'); ?>
+                                                    </div>
+
+                                                 <?php else: ?>
                                                     <h4>
                                                         <button type="button" class="btn btn-secondary" onclick="$('#mw_db_setup_toggle').toggle();"><?php _e('Database Server'); ?></button>
                                                     </h4>
                                                 <?php endif; ?>
 
-                                                <hr class="thin"/>
 
-                                                <div class="form-group">
+                                                <div class="form-group text-mute">
                                                     <label class="form-label">Database Engine</label>
                                                     <small class="text-muted d-block mb-2">Choose the database type</small>
 
-                                                    <select class="form-select" name="db_driver" onchange="showForm(this)" autocomplete="off" tabindex="1">
+                                                    <select class="form-select" name="db_driver" onchange="showForm(this)" autocomplete="off" tabindex="1" style="">
                                                         <?php foreach ($dbEngines as $engine): ?>
                                                             <option value="<?php print $engine; ?>"
                                                                 <?php if ($dbDefaultEngine == $engine) {
@@ -594,43 +709,47 @@
                                                 </div>
 
                                                 <div id="db-form">
-                                                    <div class="form-group">
+                                                    <div class="form-group text-mute">
                                                         <label class="form-label"><?php _e('Hostname'); ?></label>
                                                         <small class="text-muted d-block mb-2"><?php _e('The address of your database server'); ?></small>
                                                         <input type="text" class="form-control" autofocus name="db_host" tabindex="2" value="<?php if ($dbDefaultHostname): ?><?php print $dbDefaultHostname; ?><?php endif; ?>"/>
                                                     </div>
 
-                                                    <div class="form-group">
+                                                    <div class="form-group text-mute">
                                                         <label class="form-label"><?php _e('Username'); ?></label>
                                                         <small class="text-muted d-block mb-2"><?php _e('The username of your database.'); ?></small>
                                                         <input type="text" class="form-control" name="db_username" tabindex="2" value="<?php if ($dbDefaultUsername): ?><?php print $dbDefaultUsername; ?><?php endif; ?>"/>
                                                     </div>
 
-                                                    <div class="form-group">
+                                                    <div class="form-group text-mute">
                                                         <label class="form-label"><?php _e('Password'); ?></label>
                                                         <small class="text-muted d-block mb-2"><?php _e('The password of your database.'); ?></small>
                                                         <input type="password" class="form-control" name="db_password" tabindex="2" value="<?php if ($dbDefaultPassword): ?><?php print $dbDefaultPassword; ?><?php endif; ?>"/>
                                                     </div>
 
-                                                    <div class="form-group">
+
+                                                     <div class="form-group text-mute">
                                                         <label class="form-label"><?php _e('Database'); ?></label>
                                                         <small class="text-muted d-block mb-2"><?php _e('The name of your database.'); ?></small>
-                                                        <input type="text" class="form-control" name="db_name" id="db_name_value" tabindex="2" value="<?php if ($dbDefaultDbname): ?><?php print $dbDefaultDbname; ?><?php endif; ?>"/>
+                                                        <input type="text" class="form-control" name="db_name" id="db_name_value" tabindex="2" value=""/>
                                                     </div>
-                                                </div>
+ 
+ 
+                                                    </div>
+                                                  
 
                                                 <div id="db-form-sqlite" style="display:none">
-                                                    <div class="form-group">
+                                                    <div class="form-group text-mute">
                                                         <label class="form-label"><?php _e('Database file'); ?> </label>
                                                         <small class="text-muted d-block mb-2"><?php _e('A writable file path that may be relative to the root of your Piksera installation'); ?></small>
                                                         <input type="text" class="form-control" autofocus name="db_name_sqlite" tabindex="2" value="<?php if (isset($config['db_name_sqlite'])): ?><?php print $config['db_name_sqlite']; ?><?php endif; ?>"/>
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group">
+                                                <div class="form-group text-mute">
                                                     <label class="form-label"><?php _e('Table Prefix'); ?></label>
                                                     <small class="text-muted d-block mb-2"><?php _e('Change this If you want to install multiple instances of Piksera to this database. Only latin letters and numbers are allowed.'); ?></small>
-                                                    <input type="text" class="form-control" name="db_prefix" tabindex="3" value="<?php if ($dbDefaultDbTablePrefix): ?><?php print $dbDefaultDbTablePrefix; ?><?php endif; ?>" onblur="prefix_add(this)"/>
+                                                    <input type="text" class="form-control" name="db_prefix" tabindex="3" value="" onblur="prefix_add(this)"/>
                                                 </div>
                                             </div>
 
@@ -645,7 +764,7 @@
                                                 ?>
 
                                                 <?php if (is_array($templates) and !empty($templates)): ?>
-                                                    <div class="form-group">
+                                                    <div class="form-group text-mute">
                                                         <h5 class="text-primary mb-3 text-center"><?php print 'Choose your preferred design'; ?></h5>
 
                                                         <div class="row">
@@ -704,7 +823,7 @@
 
 
                                                 <div class="col-md-8">
-                                                    <div class="form-group">
+                                                    <div class="form-group text-mute">
                                                         <div class="custom-control custom-checkbox my-2">
                                                             <input type="checkbox" class="form-check-input" id="with_default_content" name="with_default_content" value="1" tabindex="7" checked="">
                                                             <label class="custom-control-label" for="with_default_content"><?php _e('Import default content'); ?></label>
@@ -713,11 +832,11 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="col-md-12">
-                                                    <b><?php _e('Website Default Language'); ?></b>
+                                                <div class="col-md-12 text-mute">
+                                                    <h6><?php _e('Website Default Language'); ?></h6>
                                                     <small class="text-muted d-block mb-2"><?php _e('Choose the language you want to start with.'); ?></small>
                                                     <?php $currentLang = current_lang(); ?>
-                                                    <div class="form-group">
+                                                    <div class="form-group text-mute">
                                                         <?php
                                                         $tm = new \PikseraPackages\Translation\TranslationPackageInstallHelper();
                                                         $langs = $tm->getAvailableTranslations();
@@ -736,31 +855,30 @@
 
 
                                         <div id="admin-user" <?php if ($pre_configured == true): ?><?php endif; ?>>
-                                            <div class="mw-ui-col-container">
+                                            <div class="mw-ui-col-">
                                                 <div class="admin-setup">
-                                                    <h4><?php print 'Login Information'; ?></h4>
-                                                    <hr class="thin">
+                                                    <h6><?php print 'Login Information'; ?></h6>
 
                                                     <div class="row">
                                                         <div class="col-md-6">
-                                                            <div class="form-group">
+                                                            <div class="form-group text-mute">
                                                                 <label class="form-label"><?php _e('Admin username'); ?></label>
                                                                 <input type="text" class="form-control" tabindex="9" name="admin_username" <?php if (isset($config['admin_username']) == true and isset($config['admin_username']) != ''): ?> value="<?php print $config['admin_username'] ?>" <?php endif; ?> />
                                                             </div>
 
-                                                            <div class="form-group">
+                                                            <div class="form-group text-mute">
                                                                 <label class="form-label"><?php _e('Admin password'); ?></label>
                                                                 <input type="password" class="form-control" tabindex="11" name="admin_password" <?php if (isset($config['admin_password']) == true and isset($config['admin_password']) != ''): ?> value="<?php print $config['admin_password'] ?>" <?php endif; ?> />
                                                             </div>
                                                         </div>
 
                                                         <div class="col-md-6">
-                                                            <div class="form-group">
+                                                            <div class="form-group text-mute">
                                                                 <label class="form-label"><?php _e('Admin email'); ?></label>
                                                                 <input type="text" class="form-control" tabindex="10" name="admin_email" <?php if (isset($config['admin_email']) == true and isset($config['admin_email']) != ''): ?> value="<?php print $config['admin_email'] ?>" <?php endif; ?> />
                                                             </div>
 
-                                                            <div class="form-group">
+                                                            <div class="form-group text-mute">
                                                                 <label class="form-label"><?php _e('Repeat password'); ?></label>
                                                                 <input type="password" class="form-control" tabindex="12" name="admin_password2" <?php if (isset($config['admin_password']) == true and isset($config['admin_password']) != ''): ?> value="<?php print $config['admin_password'] ?>" <?php endif; ?> />
                                                             </div>
@@ -769,7 +887,7 @@
                                                         </div>
 
                                                         <div class="col-12">
-                                                            <div class="form-group">
+                                                            <div class="form-group text-mute">
                                                                 <div class="custom-control custom-checkbox my-2">
                                                                     <input type="checkbox" class="form-check-input" id="subscribe_for_update_notification" name="subscribe_for_update_notification" value="1" tabindex="13" checked="">
                                                                     <label class="custom-control-label" for="subscribe_for_update_notification"><?php _e('Update nofitication'); ?></label>
@@ -789,7 +907,7 @@
                                             </div>
 
                                             <div class="advanced-options-installation mt-2" style="display:none;">
-                                                <div class="form-group">
+                                                <div class="form-group text-mute">
                                                     <label class="form-label"><?php _e('Admin URL'); ?></label>
                                                     <input type="text" class="form-control" name="admin_url" value="admin" id="admin_url" tabindex="15"/>
                                                 </div>
@@ -805,8 +923,17 @@
                                     <input type="hidden" name="make_install" value="1" id="is_installed_<?php print $rand; ?>">
                                     <input type="hidden" value="UTC" name="default_timezone"/>
 
-                                    <div class="text-end text-right">
-                                        <button type="submit" name="submit" class="btn btn-primary" dusk="install-button" id="install-button"  tabindex="16"><?php _e('Install'); ?></button>
+
+                                    <div class="card-body">
+
+                    <div class="container">
+                        <div class="row justify-content-center">
+
+                                    <div class="text-center">
+                                        <button type="submit" name="submit" class="btn btn-dark btn-lg btn-block" style=" width: 255px;height: 76px;border-radius: 15px; margin-bottom:6x;" dusk="install-button" id="install-button"  tabindex="16"><?php _e('Start Installation'); ?></button>
+                                    </div>
+
+                                    </div>
                                     </div>
                                 </form>
                             <?php endif; ?>
